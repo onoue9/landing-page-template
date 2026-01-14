@@ -2,7 +2,28 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com', 'upload.wikimedia.org', 'logodownload.org', 'www.omint.com.br', 'samisaude.com.br'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'logodownload.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.omint.com.br',
+      },
+      {
+        protocol: 'https',
+        hostname: 'samisaude.com.br',
+      },
+    ],
   },
 };
 
