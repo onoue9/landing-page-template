@@ -1,6 +1,7 @@
+import React from 'react';
 import './globals.css';
-import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next-font/google';
+import type { Metadata, Viewport } from 'next';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 
 const jakarta = Plus_Jakarta_Sans({ 
   subsets: ['latin'],
@@ -9,10 +10,14 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ['300', '400', '500', '600', '700', '800'],
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: 'SaúdePro - Consultoria Premium de Planos de Saúde',
   description: 'Encontre o melhor plano de saúde com economia de até 40%. Consultoria personalizada para você, sua família ou empresa.',
-  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
