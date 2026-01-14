@@ -1,0 +1,39 @@
+import './globals.css';
+import type { Metadata } from 'next';
+import { Plus_Jakarta_Sans } from 'next-font/google';
+
+const jakarta = Plus_Jakarta_Sans({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jakarta',
+  weight: ['300', '400', '500', '600', '700', '800'],
+});
+
+export const metadata: Metadata = {
+  title: 'SaúdePro - Consultoria Premium de Planos de Saúde',
+  description: 'Encontre o melhor plano de saúde com economia de até 40%. Consultoria personalizada para você, sua família ou empresa.',
+  viewport: 'width=device-width, initial-scale=1',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="pt-BR" className="scroll-smooth">
+      <body className={`${jakarta.variable} font-sans antialiased text-slate-900 overflow-x-hidden`}>
+        {children}
+        {/* Formulário oculto para Netlify Forms */}
+        <form name="leads-saude" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="text" name="nome" />
+          <input type="text" name="whatsapp" />
+          <input type="email" name="email" />
+          <input type="text" name="cidade_estado" />
+          <input type="text" name="tipo_plano" />
+          <input type="number" name="vidas" />
+        </form>
+      </body>
+    </html>
+  );
+}
