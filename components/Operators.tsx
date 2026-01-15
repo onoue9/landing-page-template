@@ -1,6 +1,24 @@
+'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { OPERATORS } from '../constants';
+
+const OperatorLogo = ({ name, logoUrl }: { name: string, logoUrl: string }) => {
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError) {
+    return <span className="text-[10px] font-bold text-slate-400 uppercase">{name}</span>;
+  }
+
+  return (
+    <img 
+      src={logoUrl} 
+      alt={`Logo ${name}`} 
+      className="max-w-full max-h-full object-contain pointer-events-none"
+      onError={() => setHasError(true)}
+    />
+  );
+};
 
 const Operators: React.FC = () => {
   return (
@@ -19,15 +37,7 @@ const Operators: React.FC = () => {
               title={op.name}
             >
               <div className="relative w-full aspect-[3/1] flex items-center justify-center grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
-                <img 
-                  src={op.logoUrl} 
-                  alt={`Logo ${op.name}`} 
-                  className="max-w-full max-h-full object-contain pointer-events-none"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                    (e.target as HTMLImageElement).parentElement!.innerHTML = `<span class="text-[10px] font-bold text-slate-400 uppercase">${op.name}</span>`;
-                  }}
-                />
+                <OperatorLogo name={op.name} logoUrl={op.logoUrl} />
               </div>
             </div>
           ))}
