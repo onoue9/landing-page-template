@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://seusite.com.br/sitemap.xml
+Sitemap: https://landing-page-plano-saude.netlify.app/sitemap.xml
