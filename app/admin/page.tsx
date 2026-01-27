@@ -42,24 +42,13 @@ export default function AdminPage() {
   const [themeConfig, setThemeConfig] = useState<ThemeConfig | null>(null);
   const [isSaved, setIsSaved] = useState(true);
 
-  // Load configs
+  // Load configs directly from JSON files
   useEffect(() => {
     const loadConfigs = async () => {
-      try {
-        const [siteRes, themeRes] = await Promise.all([
-          fetch('/api/config?file=site'),
-          fetch('/api/config?file=theme')
-        ]);
-        
-        if (siteRes.ok) setSiteConfig(await siteRes.json());
-        if (themeRes.ok) setThemeConfig(await themeRes.json());
-      } catch {
-        // Fallback: load from static files
-        const site = await import('@/config/site.json');
-        const theme = await import('@/config/theme.json');
-        setSiteConfig(site.default as SiteConfig);
-        setThemeConfig(theme.default as ThemeConfig);
-      }
+      const site = await import('@/config/site.json');
+      const theme = await import('@/config/theme.json');
+      setSiteConfig(site.default as SiteConfig);
+      setThemeConfig(theme.default as ThemeConfig);
     };
     loadConfigs();
   }, []);
