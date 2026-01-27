@@ -1,36 +1,41 @@
 
 import React from 'react';
-import { WHATSAPP_LINK } from '../constants';
+import { content } from '@/lib/config';
+import { getWhatsAppLink } from '@/lib/config';
 
 const CTASection: React.FC = () => {
+  const { cta } = content;
+  
   return (
-    <section className="py-12 sm:py-20 px-4" aria-labelledby="cta-heading">
-      <div className="max-w-5xl mx-auto bg-slate-900 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" aria-hidden="true"></div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[100px]" aria-hidden="true"></div>
-        
-        <div className="relative z-10">
-          <h2 id="cta-heading" className="text-2xl sm:text-5xl font-extrabold mb-4 sm:mb-8 leading-tight px-2">Sua saúde não pode esperar mais.</h2>
-          <p className="text-slate-300 text-sm sm:text-xl mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            As tabelas de preços sofrem reajustes frequentes. Garanta agora as condições atuais e economize de verdade.
-          </p>
-          
-          <div className="flex flex-col items-center gap-4">
-            <a 
-              href={WHATSAPP_LINK}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white text-base sm:text-xl font-bold py-5 sm:py-6 px-8 sm:px-12 rounded-2xl transition-all active:scale-95 shadow-xl shadow-green-900/20"
-              aria-label="Falar com especialista via WhatsApp - Cotação gratuita"
-            >
-              Falar com Especialista
-              <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] animate-pulse" aria-hidden="true">Online</span>
-            </a>
-            <p className="text-slate-500 text-[10px] sm:text-xs uppercase tracking-widest font-bold">Cotação 100% gratuita</p>
-          </div>
-        </div>
+    <section className="py-20 sm:py-32 bg-slate-900 relative overflow-hidden" aria-labelledby="cta-heading">
+      <div 
+        className="absolute inset-0 opacity-50" 
+        style={{ 
+          backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(59,130,246,0.3), transparent 70%)',
+        }}
+        aria-hidden="true"
+      ></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full" aria-hidden="true"></div>
+      
+      <div className="max-w-4xl mx-auto px-6 sm:px-4 text-center relative z-10">
+        <h2 id="cta-heading" className="text-3xl sm:text-5xl md:text-6xl font-black text-white mb-6 sm:mb-8 leading-snug tracking-tight">
+          {cta.title}
+        </h2>
+        <p className="text-slate-400 text-base sm:text-xl mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
+          {cta.subtitle}
+        </p>
+        <a 
+          href={getWhatsAppLink()}
+          className="inline-flex items-center justify-center gap-3 bg-white text-slate-900 px-8 py-5 sm:px-12 sm:py-6 rounded-2xl text-base sm:text-lg font-bold shadow-2xl hover:bg-blue-50 transition-all active:scale-95"
+          aria-label="Falar com especialista via WhatsApp"
+        >
+          {cta.buttonText}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <p className="mt-6 text-slate-500 text-xs sm:text-sm">{cta.note}</p>
       </div>
     </section>
   );
 };
 
 export default CTASection;
-

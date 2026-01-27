@@ -1,40 +1,41 @@
 
 import React from 'react';
-import { TESTIMONIALS } from '../constants';
+import { Star } from 'lucide-react';
+import { content } from '@/lib/config';
 
 const SocialProof: React.FC = () => {
+  const { testimonials } = content;
+  
   return (
-    <section className="py-24 bg-white" aria-labelledby="testimonials-heading">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">O que dizem nossos clientes</h2>
-          <div className="flex justify-center gap-1 text-yellow-400 text-2xl mb-2" role="img" aria-label="Avaliação 5 de 5 estrelas">
-            {"★★★★★".split("").map((s, i) => <span key={i} aria-hidden="true">{s}</span>)}
-          </div>
-          <p className="text-slate-600">Nota 4.9/5 baseada em avaliações reais.</p>
+    <section className="py-20 sm:py-32 relative overflow-hidden bg-white" aria-labelledby="testimonials-heading">
+      <div className="max-w-7xl mx-auto px-6 sm:px-4">
+        <div className="text-center mb-12 sm:mb-20">
+          <h2 id="testimonials-heading" className="text-2xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">{testimonials.title}</h2>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8" role="list">
-          {TESTIMONIALS.map((t) => (
-            <article key={t.id} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col h-full" role="listitem">
-              <div className="text-blue-600 text-4xl mb-4 font-serif" aria-hidden="true">"</div>
-              <blockquote className="text-slate-700 italic flex-grow mb-6">{t.content}</blockquote>
-              <footer className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-700" aria-hidden="true">
-                  {t.name[0]}
+        <ul className="grid lg:grid-cols-3 gap-6 sm:gap-8" role="list">
+          {testimonials.items.map((t) => (
+            <li key={t.id}>
+              <article className="bg-slate-50 p-8 sm:p-10 rounded-[2rem] relative h-full border border-slate-100" aria-labelledby={`testimonial-${t.id}`}>
+                <div className="flex items-center gap-1 mb-6" role="img" aria-label={`Avaliação: ${t.rating} de 5 estrelas`}>
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" aria-hidden="true" />
+                  ))}
                 </div>
-                <div>
-                  <cite className="font-bold text-slate-900 text-sm not-italic">{t.name}</cite>
-                  <p className="text-slate-500 text-xs">{t.role}</p>
-                </div>
-              </footer>
-            </article>
+                <blockquote>
+                  <p className="text-slate-600 mb-8 text-sm sm:text-base leading-relaxed italic">&ldquo;{t.content}&rdquo;</p>
+                  <footer>
+                    <p id={`testimonial-${t.id}`} className="font-bold text-slate-900">{t.name}</p>
+                    <p className="text-slate-400 text-xs sm:text-sm">{t.role}</p>
+                  </footer>
+                </blockquote>
+              </article>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
 };
 
 export default SocialProof;
-

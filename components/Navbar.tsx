@@ -1,38 +1,74 @@
 'use client';
 
-import React from 'react';
-import { WHATSAPP_LINK } from '../constants';
+import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
+import { site, getWhatsAppLink } from '@/lib/config';
 
 const Navbar: React.FC = () => {
-  return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] w-[92%] sm:w-[95%] max-w-7xl" role="banner">
-      <div className="bg-white/90 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1)] rounded-2xl px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between transition-all">
-        <a href="#" className="flex items-center gap-2 sm:gap-3" aria-label="SaúdePro - Página inicial">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-lg sm:rounded-xl flex items-center justify-center text-white shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
-          </div>
-          <span className="text-lg sm:text-xl font-black text-slate-900 tracking-tighter">SAÚDE<span className="text-blue-600">PRO</span></span>
-        </a>
-        
-        <nav className="hidden lg:flex items-center gap-8 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]" role="navigation" aria-label="Menu principal">
-          <a href="#beneficios" className="hover:text-blue-600 transition-colors">Diferenciais</a>
-          <a href="#planos" className="hover:text-blue-600 transition-colors">Categorias</a>
-          <a href="#contato" className="hover:text-blue-600 transition-colors">Solicitar Cotação</a>
-        </nav>
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-        <div className="flex items-center gap-2">
-          <a 
-            href={WHATSAPP_LINK}
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-green-500 hover:bg-green-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-bold shadow-lg shadow-green-100 transition-all active:scale-95"
-            aria-label="Contato via WhatsApp"
-          >
-            WhatsApp
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header className={`fixed w-full z-50 transition-all duration-300 px-3 sm:px-4 py-3 sm:py-4 ${scrolled ? 'bg-white/80 backdrop-blur-xl shadow-sm' : ''}`}>
+      <nav className={`max-w-6xl mx-auto ${scrolled ? '' : 'bg-white/60 backdrop-blur-lg'} rounded-2xl sm:rounded-full py-2.5 sm:py-3 px-4 sm:px-6 shadow-lg border border-white/20`} aria-label="Navegação principal">
+        <div className="flex items-center justify-between">
+          <a href="/" className="flex items-center gap-2" aria-label={`${site.company.name} - Página inicial`}>
+            <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xs sm:text-sm" aria-hidden="true">{site.company.name.charAt(0)}</div>
+            <span className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">{site.company.name.split('Pro')[0]}<span className="text-blue-600">Pro</span></span>
           </a>
+          
+          <ul className="hidden md:flex items-center gap-6 lg:gap-10" role="list">
+            <li><a href="#beneficios" className="text-slate-600 hover:text-slate-900 font-semibold text-sm transition-colors">Benefícios</a></li>
+            <li><a href="#planos" className="text-slate-600 hover:text-slate-900 font-semibold text-sm transition-colors">Planos</a></li>
+            <li><a href="#faq" className="text-slate-600 hover:text-slate-900 font-semibold text-sm transition-colors">FAQ</a></li>
+          </ul>
+          
+          <div className="hidden md:flex items-center gap-4">
+            <a 
+              href={getWhatsAppLink()}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md transition-all flex items-center gap-2 active:scale-95"
+              aria-label="Falar com especialista via WhatsApp"
+            >
+              Falar com especialista
+            </a>
+          </div>
+          
+          <button 
+            className="md:hidden p-1.5" 
+            aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
-      </div>
-    </nav>
+        
+        {mobileMenuOpen && (
+          <div className="md:hidden pt-4 pb-2 border-t border-slate-100 mt-3" role="navigation" aria-label="Menu mobile">
+            <ul className="flex flex-col gap-3" role="list">
+              <li><a href="#beneficios" className="block py-2 text-slate-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>Benefícios</a></li>
+              <li><a href="#planos" className="block py-2 text-slate-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>Planos</a></li>
+              <li><a href="#faq" className="block py-2 text-slate-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>FAQ</a></li>
+              <li>
+                <a 
+                  href={getWhatsAppLink()}
+                  className="mt-2 block w-full bg-blue-600 text-white px-6 py-3 rounded-xl text-sm font-bold text-center"
+                  aria-label="Falar com especialista via WhatsApp"
+                >
+                  Falar com especialista
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+      </nav>
+    </header>
   );
 };
 

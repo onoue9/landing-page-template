@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 :root {
+  /* Theme colors - these can be overridden by the admin panel */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-secondary: #10b981;
+  --color-secondary-hover: #059669;
+  --color-accent: #0f172a;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  
+  /* Legacy variables */
   --foreground-rgb: 15, 23, 42;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 248, 250, 252;
@@ -23,10 +35,33 @@ body {
 }
 
 .mesh-gradient {
-  background-color: #f8fafc;
+  background-color: var(--color-background);
   background-image: 
     radial-gradient(at 0% 0%, hsla(217,100%,97%,1) 0, transparent 50%), 
     radial-gradient(at 100% 0%, hsla(210,100%,96%,1) 0, transparent 50%), 
     radial-gradient(at 100% 100%, hsla(142,69%,96%,1) 0, transparent 50%), 
     radial-gradient(at 0% 100%, hsla(217,100%,97%,1) 0, transparent 50%);
+}
+
+/* Primary button styles using CSS variables */
+.btn-primary {
+  background-color: var(--color-primary);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+}
+.btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
 }

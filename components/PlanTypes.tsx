@@ -1,30 +1,26 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { PLAN_TYPES, WHATSAPP_LINK } from '../constants';
-
-const planAltTexts: Record<number, string> = {
-  1: "Profissional autônomo sorrindo em ambiente de trabalho moderno",
-  2: "Família feliz reunida em momento de lazer ao ar livre",
-  3: "Equipe de profissionais em reunião de negócios colaborativa"
-};
+import { content } from '@/lib/config';
 
 const PlanTypes: React.FC = () => {
+  const { planTypes } = content;
+  
   return (
     <section id="planos" className="py-20 sm:py-32 bg-slate-50 relative" aria-labelledby="plans-heading">
       <div className="max-w-7xl mx-auto px-6 sm:px-4">
         <div className="text-center mb-12 sm:mb-20">
-          <h2 id="plans-heading" className="text-2xl sm:text-5xl font-extrabold text-slate-900 mb-4 sm:mb-6 tracking-tight">Tipos de Cobertura</h2>
-          <p className="text-slate-500 max-w-2xl mx-auto text-sm sm:text-lg">Soluções adaptadas ao seu momento de vida.</p>
+          <h2 id="plans-heading" className="text-2xl sm:text-5xl font-extrabold text-slate-900 mb-4 sm:mb-6 tracking-tight">{planTypes.title}</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto text-sm sm:text-lg">{planTypes.subtitle}</p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-6 sm:gap-10" role="list">
-          {PLAN_TYPES.map((plan) => (
+          {planTypes.items.map((plan) => (
             <article key={plan.id} className="bg-white rounded-[2rem] overflow-hidden shadow-sm flex flex-col group border border-slate-100 transition-all active:scale-[0.98]" role="listitem" aria-labelledby={`plan-${plan.id}`}>
               <div className="h-48 sm:h-64 overflow-hidden relative">
                 <Image 
                   src={plan.image} 
-                  alt={planAltTexts[plan.id] || plan.title} 
+                  alt={plan.imageAlt} 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   className="object-cover object-top"
@@ -50,4 +46,3 @@ const PlanTypes: React.FC = () => {
 };
 
 export default PlanTypes;
-
