@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="white"/>
+  <text x="10" y="45" font-family="Times New Roman, serif" font-weight="bold" font-size="36" fill="#003366">Sul</text>
+  <text x="65" y="45" font-family="Times New Roman, serif" font-weight="bold" font-size="36" fill="#ff6600">América</text>
+</svg>

@@ -10,25 +10,25 @@ export const BENEFITS: Benefit[] = [
     id: 1,
     title: "Economia Garantida",
     description: "Analisamos o mercado para encontrar o melhor custo-benefício para sua necessidade.",
-    icon: "💰"
+    icon: "wallet"
   },
   {
     id: 2,
     title: "Atendimento Personalizado",
     description: "Um especialista dedicado para entender seu perfil e tirar todas as suas dúvidas.",
-    icon: "🤝"
+    icon: "user"
   },
   {
     id: 3,
     title: "Comparação de Planos",
     description: "Comparamos as principais operadoras do Brasil em uma única apresentação clara.",
-    icon: "📊"
+    icon: "chart"
   },
   {
     id: 4,
     title: "Suporte Completo",
     description: "Assessoria técnica e jurídica antes, durante e após o fechamento do contrato.",
-    icon: "🚀"
+    icon: "shield"
   }
 ];
 
@@ -37,33 +37,33 @@ export const PLAN_TYPES: PlanType[] = [
     id: 1,
     title: "Individual / Autônomo",
     description: "Planos pensados para você que busca segurança e rede de atendimento de qualidade.",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 2,
     title: "Familiar",
     description: "Proteção para quem você mais ama com descontos progressivos por dependente.",
-    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 3,
     title: "Empresarial / MEI",
     description: "A partir de 2 vidas. Redução de até 40% nos custos em relação ao plano individual.",
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2959210?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800"
   }
 ];
 
 export const OPERATORS = [
-  { name: "Unimed", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_Unimed.svg" },
-  { name: "Amil", logoUrl: "https://logodownload.org/wp-content/uploads/2014/10/amil-logo.png" },
-  { name: "Bradesco Saúde", logoUrl: "https://logodownload.org/wp-content/uploads/2014/10/bradesco-saude-logo.png" },
-  { name: "SulAmérica", logoUrl: "https://logodownload.org/wp-content/uploads/2014/05/sulamerica-logo.png" },
-  { name: "Porto Seguro", logoUrl: "https://logodownload.org/wp-content/uploads/2014/10/porto-seguro-logo.png" },
-  { name: "Hapvida", logoUrl: "https://logodownload.org/wp-content/uploads/2019/02/hapvida-logo.png" },
-  { name: "NotreDame Intermédica", logoUrl: "https://logodownload.org/wp-content/uploads/2019/07/notredame-intermedica-logo.png" },
-  { name: "Prevent Senior", logoUrl: "https://logodownload.org/wp-content/uploads/2021/04/prevent-senior-logo.png" },
-  { name: "Omint", logoUrl: "https://www.omint.com.br/wp-content/themes/omint-theme/assets/img/omint-logo.png" },
-  { name: "Sami", logoUrl: "https://samisaude.com.br/wp-content/uploads/2020/10/Logo-Sami-Saude-01-1.png" }
+  { name: "Unimed", logoUrl: "/logos/unimed.svg" },
+  { name: "Amil", logoUrl: "/logos/amil.svg" },
+  { name: "Bradesco Saúde", logoUrl: "/logos/bradesco.svg" },
+  { name: "SulAmérica", logoUrl: "/logos/sulamerica.svg" },
+  { name: "Porto Seguro", logoUrl: "/logos/porto.svg" },
+  { name: "Hapvida", logoUrl: "/logos/hapvida.png" },
+  { name: "NotreDame Intermédica", logoUrl: "/logos/notredame.svg" },
+  { name: "Prevent Senior", logoUrl: "/logos/prevent.png" },
+  { name: "Omint", logoUrl: "/logos/omint.svg" },
+  { name: "Sami", logoUrl: "/logos/sami.svg" }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

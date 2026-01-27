@@ -3,9 +3,11 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Benefits from '../components/Benefits';
 import PlanTypes from '../components/PlanTypes';
+import Steps from '../components/Steps';
 import Operators from '../components/Operators';
 import LeadForm from '../components/LeadForm';
 import SocialProof from '../components/SocialProof';
+import FAQ from '../components/FAQ';
 import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
@@ -18,6 +20,7 @@ export default function Home() {
         <Hero />
         <Benefits />
         <PlanTypes />
+        <Steps />
         <Operators />
         <div id="contato" className="bg-slate-50 py-20 px-4">
           <div className="max-w-4xl mx-auto">
@@ -25,6 +28,7 @@ export default function Home() {
           </div>
         </div>
         <SocialProof />
+        <FAQ />
         <CTASection />
       </main>
       <Footer />
