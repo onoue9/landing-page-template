@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Download, Eye, Save, RefreshCw } from 'lucide-react';
+import { Download, RefreshCw } from 'lucide-react';
 
 // Types
 interface SiteConfig {
@@ -103,10 +103,6 @@ export default function AdminPage() {
     URL.revokeObjectURL(url);
   };
 
-  const openPreview = () => {
-    window.open('/', '_blank');
-  };
-
   if (!siteConfig || !themeConfig) {
     return (
       <div className="min-h-screen bg-slate-100 flex items-center justify-center">
@@ -131,13 +127,6 @@ export default function AdminPage() {
           </div>
           
           <div className="flex items-center gap-3">
-            <button
-              onClick={openPreview}
-              className="flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium transition-colors"
-            >
-              <Eye className="w-4 h-4" />
-              Preview
-            </button>
             <button
               onClick={exportConfig}
               className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
