@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-.next/out/
+# Next.js build output
+.next/
+out/
