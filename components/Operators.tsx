@@ -4,8 +4,12 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { content } from '@/lib/config';
 
+// Logos that are vertical/square and need special sizing
+const verticalLogos = ['Porto Seguro', 'Omint', 'Sami'];
+
 const OperatorLogo = ({ name, logoUrl }: { name: string, logoUrl: string }) => {
   const [hasError, setHasError] = useState(false);
+  const isVertical = verticalLogos.includes(name);
 
   if (hasError) {
     return <span className="text-[10px] font-bold text-text-muted uppercase">{name}</span>;
@@ -15,9 +19,9 @@ const OperatorLogo = ({ name, logoUrl }: { name: string, logoUrl: string }) => {
     <Image 
       src={logoUrl} 
       alt={`Logo da operadora ${name}`} 
-      fill
-      sizes="180px"
-      className="object-contain pointer-events-none"
+      width={isVertical ? 80 : 140}
+      height={isVertical ? 60 : 48}
+      className={`object-contain pointer-events-none ${isVertical ? 'max-h-14' : 'max-h-12'} w-auto`}
       onError={() => setHasError(true)}
     />
   );
@@ -34,13 +38,13 @@ const Operators: React.FC = () => {
           <div className="h-1 w-20 bg-primary mx-auto rounded-full" aria-hidden="true"></div>
         </div>
         
-        <ul className="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-12 items-center justify-items-center" role="list" aria-label="Lista de operadoras parceiras">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 sm:gap-10 items-center justify-items-center" role="list" aria-label="Lista de operadoras parceiras">
           {operators.items.map((op) => (
             <li 
               key={op.name} 
-              className="group flex flex-col items-center justify-center w-full max-w-[140px] sm:max-w-[180px] p-2 sm:p-4 transition-all duration-500"
+              className="group flex items-center justify-center h-16 w-full max-w-[160px] p-2 transition-all duration-500"
             >
-              <div className="relative w-full aspect-[3/1] flex items-center justify-center grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
+              <div className="flex items-center justify-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
                 <OperatorLogo name={op.name} logoUrl={op.logoUrl} />
               </div>
             </li>
