@@ -4,11 +4,21 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { site, getWhatsAppLink } from '@/lib/config';
 
-const navLinks = [
+// All navigation links
+const allNavLinks = [
   { href: '#beneficios', label: 'Benefícios' },
   { href: '#planos', label: 'Planos' },
   { href: '#como-funciona', label: 'Como Funciona' },
   { href: '#depoimentos', label: 'Depoimentos' },
+  { href: '#contato', label: 'Contato' },
+  { href: '#faq', label: 'FAQ' },
+];
+
+// Show fewer links on smaller screens
+const desktopNavLinks = allNavLinks;
+const mobileNavLinks = [
+  { href: '#beneficios', label: 'Benefícios' },
+  { href: '#planos', label: 'Planos' },
   { href: '#contato', label: 'Contato' },
   { href: '#faq', label: 'FAQ' },
 ];
@@ -32,8 +42,9 @@ const Navbar: React.FC = () => {
             <span className="text-base sm:text-lg font-bold text-accent tracking-tight">{site.company.name.split('Pro')[0]}<span className="text-primary">Pro</span></span>
           </a>
           
+          {/* Desktop navigation - full links */}
           <ul className="hidden lg:flex items-center gap-5 xl:gap-8" role="list">
-            {navLinks.map((link) => (
+            {desktopNavLinks.map((link) => (
               <li key={link.href}>
                 <a href={link.href} className="text-text-muted hover:text-accent font-semibold text-sm transition-colors">
                   {link.label}
@@ -62,10 +73,11 @@ const Navbar: React.FC = () => {
           </button>
         </div>
         
+        {/* Mobile navigation - fewer links */}
         {mobileMenuOpen && (
           <div className="lg:hidden pt-4 pb-2 border-t border-accent/10 mt-3" role="navigation" aria-label="Menu mobile">
             <ul className="flex flex-col gap-3" role="list">
-              {navLinks.map((link) => (
+              {mobileNavLinks.map((link) => (
                 <li key={link.href}>
                   <a 
                     href={link.href} 

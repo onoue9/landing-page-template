@@ -13,10 +13,12 @@ import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import BackToTop from '../components/BackToTop';
+import ScrollProgress from '../components/ui/ScrollProgress';
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollProgress />
       <Navbar />
       <main className="flex-grow">
         <Hero />
@@ -25,7 +27,7 @@ export default function Home() {
         <Steps />
         <Operators />
         <Consultant />
-        <div id="contato" className="bg-slate-50 py-20 px-4">
+        <div id="contato" className="bg-background py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <LeadForm />
           </div>

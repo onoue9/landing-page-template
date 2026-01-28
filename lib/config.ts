@@ -1,7 +1,7 @@
 import siteConfig from '@/config/site.json';
 import themeConfig from '@/config/theme.json';
 import contentConfig from '@/config/content.json';
-import type { SiteConfig, ThemeConfig, ContentConfig, FullConfig } from './config-types';
+import type { SiteConfig, ThemeConfig, ContentConfig, FullConfig } from '@/types/config-types';
 
 // Export typed configs
 export const site = siteConfig as SiteConfig;

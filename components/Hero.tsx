@@ -1,8 +1,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { content } from '@/lib/config';
-import { getWhatsAppLink } from '@/lib/config';
+import { ArrowRight } from 'lucide-react';
+import { content, getWhatsAppLink } from '@/lib/config';
 
 const Hero: React.FC = () => {
   const { hero } = content;
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
               aria-label="Falar com especialista via WhatsApp"
             >
               {hero.ctaPrimary}
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </a>
             <a 
               href="#contato"

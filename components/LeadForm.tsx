@@ -1,122 +1,23 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { content } from '@/lib/config';
+import { useLeadForm } from '@/hooks/useLeadForm';
 
 const LeadForm: React.FC = () => {
   const { form } = content;
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const [formData, setFormData] = useState({
-    nome: '',
-    whatsapp: '',
-    email: '',
-    cidade_estado: '',
-    tipo_plano: '',
-    vidas: '1'
-  });
-  const [phone, setPhone] = useState('');
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [touched, setTouched] = useState<Record<string, boolean>>({});
-
-  const formatPhone = (value: string): string => {
-    const digits = value.replace(/\D/g, '').slice(0, 11);
-    if (digits.length <= 2) return digits.length ? `(${digits}` : '';
-    if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
-    return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
-  };
-
-  const isValidPhone = (value: string): boolean => {
-    const digits = value.replace(/\D/g, '');
-    return digits.length >= 10;
-  };
-
-  const isValidEmail = (value: string): boolean => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-  };
-
-  const validateField = (name: string, value: string): string | undefined => {
-    switch (name) {
-      case 'nome':
-        return value.trim().length < 3 ? 'Nome deve ter pelo menos 3 caracteres' : undefined;
-      case 'whatsapp':
-        return !isValidPhone(value) ? 'WhatsApp inválido' : undefined;
-      case 'email':
-        return !isValidEmail(value) ? 'E-mail inválido' : undefined;
-      case 'cidade_estado':
-        return value.trim().length < 3 ? 'Cidade/UF inválido' : undefined;
-      default:
-        return undefined;
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    if (touched[name]) {
-      const error = validateField(name, value);
-      setErrors(prev => ({ ...prev, [name]: error || '' }));
-    }
-  };
-
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatPhone(e.target.value);
-    setPhone(formatted);
-    setFormData(prev => ({ ...prev, whatsapp: formatted }));
-    if (touched.whatsapp) {
-      const error = validateField('whatsapp', formatted);
-      setErrors(prev => ({ ...prev, whatsapp: error || '' }));
-    }
-  };
-
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setTouched(prev => ({ ...prev, [name]: true }));
-    const error = validateField(name, value);
-    setErrors(prev => ({ ...prev, [name]: error || '' }));
-  };
-
-  const validateForm = (): boolean => {
-    const newErrors: Record<string, string> = {};
-    const fields = ['nome', 'whatsapp', 'email', 'cidade_estado'];
-    fields.forEach(field => {
-      const error = validateField(field, field === 'whatsapp' ? phone : formData[field as keyof typeof formData]);
-      if (error) newErrors[field] = error;
-    });
-    setErrors(newErrors);
-    setTouched({ nome: true, whatsapp: true, email: true, cidade_estado: true });
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-    
-    setStatus('submitting');
-    
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "leads-saude",
-          ...formData
-        }).toString(),
-      });
-
-      if (typeof window !== 'undefined' && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'generate_lead', {
-          event_category: 'form',
-          event_label: 'lead_form_submit'
-        });
-      }
-
-      setStatus('success');
-    } catch {
-      setStatus('error');
-    }
-  };
-
-  const inputClassName = (field: string) => `w-full px-5 py-4 rounded-xl border ${touched[field] && errors[field] ? 'border-red-400 focus:ring-red-500' : 'border-accent/10 focus:ring-primary'} focus:ring-2 focus:border-transparent outline-none transition-all text-accent text-sm sm:text-base`;
+  const {
+    formData,
+    phone,
+    status,
+    errors,
+    touched,
+    handleChange,
+    handlePhoneChange,
+    handleBlur,
+    handleSubmit,
+    getInputClassName,
+  } = useLeadForm();
 
   if (status === 'success') {
     return (
@@ -165,7 +66,7 @@ const LeadForm: React.FC = () => {
             value={formData.nome}
             onChange={handleChange}
             onBlur={handleBlur}
-            className={inputClassName('nome')}
+            className={getInputClassName('nome')}
             aria-required="true"
             aria-invalid={touched.nome && !!errors.nome}
             aria-describedby={errors.nome ? 'nome-error' : undefined}
@@ -186,7 +87,7 @@ const LeadForm: React.FC = () => {
               value={phone}
               onChange={handlePhoneChange}
               onBlur={handleBlur}
-              className={inputClassName('whatsapp')}
+              className={getInputClassName('whatsapp')}
               aria-required="true"
               aria-invalid={touched.whatsapp && !!errors.whatsapp}
               aria-describedby={errors.whatsapp ? 'whatsapp-error' : undefined}
@@ -205,7 +106,7 @@ const LeadForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={inputClassName('email')}
+              className={getInputClassName('email')}
               aria-required="true"
               aria-invalid={touched.email && !!errors.email}
               aria-describedby={errors.email ? 'email-error' : undefined}
@@ -226,7 +127,7 @@ const LeadForm: React.FC = () => {
             value={formData.cidade_estado}
             onChange={handleChange}
             onBlur={handleBlur}
-            className={inputClassName('cidade_estado')}
+            className={getInputClassName('cidade_estado')}
             aria-required="true"
             aria-invalid={touched.cidade_estado && !!errors.cidade_estado}
             aria-describedby={errors.cidade_estado ? 'cidade-error' : undefined}
