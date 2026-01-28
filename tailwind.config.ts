@@ -11,6 +11,22 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-jakarta)', 'sans-serif'],
       },
+      colors: {
+        // Theme colors from CSS variables
+        primary: {
+          DEFAULT: 'var(--color-primary)',
+          hover: 'var(--color-primary-hover)',
+        },
+        secondary: {
+          DEFAULT: 'var(--color-secondary)',
+          hover: 'var(--color-secondary-hover)',
+        },
+        accent: 'var(--color-accent)',
+        surface: 'var(--color-surface)',
+        background: 'var(--color-background)',
+        'text-main': 'var(--color-text)',
+        'text-muted': 'var(--color-text-muted)',
+      },
       keyframes: {
         float: {
           '0%': { transform: 'translateY(0px)' },

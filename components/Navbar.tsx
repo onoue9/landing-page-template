@@ -19,20 +19,20 @@ const Navbar: React.FC = () => {
       <nav className={`max-w-6xl mx-auto ${scrolled ? '' : 'bg-white/60 backdrop-blur-lg'} rounded-2xl sm:rounded-full py-2.5 sm:py-3 px-4 sm:px-6 shadow-lg border border-white/20`} aria-label="Navegação principal">
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center gap-2" aria-label={`${site.company.name} - Página inicial`}>
-            <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xs sm:text-sm" aria-hidden="true">{site.company.name.charAt(0)}</div>
-            <span className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">{site.company.name.split('Pro')[0]}<span className="text-blue-600">Pro</span></span>
+            <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xs sm:text-sm" aria-hidden="true">{site.company.name.charAt(0)}</div>
+            <span className="text-base sm:text-lg font-bold text-accent tracking-tight">{site.company.name.split('Pro')[0]}<span className="text-primary">Pro</span></span>
           </a>
           
           <ul className="hidden md:flex items-center gap-6 lg:gap-10" role="list">
-            <li><a href="#beneficios" className="text-slate-600 hover:text-slate-900 font-semibold text-sm transition-colors">Benefícios</a></li>
-            <li><a href="#planos" className="text-slate-600 hover:text-slate-900 font-semibold text-sm transition-colors">Planos</a></li>
-            <li><a href="#faq" className="text-slate-600 hover:text-slate-900 font-semibold text-sm transition-colors">FAQ</a></li>
+            <li><a href="#beneficios" className="text-text-muted hover:text-accent font-semibold text-sm transition-colors">Benefícios</a></li>
+            <li><a href="#planos" className="text-text-muted hover:text-accent font-semibold text-sm transition-colors">Planos</a></li>
+            <li><a href="#faq" className="text-text-muted hover:text-accent font-semibold text-sm transition-colors">FAQ</a></li>
           </ul>
           
           <div className="hidden md:flex items-center gap-4">
             <a 
               href={getWhatsAppLink()}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md transition-all flex items-center gap-2 active:scale-95"
+              className="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md transition-all flex items-center gap-2 active:scale-95"
               aria-label="Falar com especialista via WhatsApp"
             >
               Falar com especialista
@@ -50,15 +50,15 @@ const Navbar: React.FC = () => {
         </div>
         
         {mobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-2 border-t border-slate-100 mt-3" role="navigation" aria-label="Menu mobile">
+          <div className="md:hidden pt-4 pb-2 border-t border-accent/10 mt-3" role="navigation" aria-label="Menu mobile">
             <ul className="flex flex-col gap-3" role="list">
-              <li><a href="#beneficios" className="block py-2 text-slate-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>Benefícios</a></li>
-              <li><a href="#planos" className="block py-2 text-slate-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>Planos</a></li>
-              <li><a href="#faq" className="block py-2 text-slate-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>FAQ</a></li>
+              <li><a href="#beneficios" className="block py-2 text-text-muted font-semibold" onClick={() => setMobileMenuOpen(false)}>Benefícios</a></li>
+              <li><a href="#planos" className="block py-2 text-text-muted font-semibold" onClick={() => setMobileMenuOpen(false)}>Planos</a></li>
+              <li><a href="#faq" className="block py-2 text-text-muted font-semibold" onClick={() => setMobileMenuOpen(false)}>FAQ</a></li>
               <li>
                 <a 
                   href={getWhatsAppLink()}
-                  className="mt-2 block w-full bg-blue-600 text-white px-6 py-3 rounded-xl text-sm font-bold text-center"
+                  className="mt-2 block w-full bg-primary text-white px-6 py-3 rounded-xl text-sm font-bold text-center"
                   aria-label="Falar com especialista via WhatsApp"
                 >
                   Falar com especialista

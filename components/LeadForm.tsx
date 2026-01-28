@@ -103,7 +103,6 @@ const LeadForm: React.FC = () => {
         }).toString(),
       });
 
-      // Tracking: disparar evento de conversão
       if (typeof window !== 'undefined' && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'generate_lead', {
           event_category: 'form',
@@ -117,27 +116,27 @@ const LeadForm: React.FC = () => {
     }
   };
 
-  const inputClassName = (field: string) => `w-full px-5 py-4 rounded-xl border ${touched[field] && errors[field] ? 'border-red-400 focus:ring-red-500' : 'border-slate-200 focus:ring-blue-500'} focus:ring-2 focus:border-transparent outline-none transition-all text-slate-900 text-sm sm:text-base`;
+  const inputClassName = (field: string) => `w-full px-5 py-4 rounded-xl border ${touched[field] && errors[field] ? 'border-red-400 focus:ring-red-500' : 'border-accent/10 focus:ring-primary'} focus:ring-2 focus:border-transparent outline-none transition-all text-accent text-sm sm:text-base`;
 
   if (status === 'success') {
     return (
-      <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-12 shadow-xl border border-slate-100 text-center">
-        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
-          <svg className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div className="bg-surface rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-12 shadow-xl border border-accent/5 text-center">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+          <svg className="w-8 h-8 sm:w-10 sm:h-10 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">{form.successTitle}</h3>
-        <p className="text-slate-500 text-sm sm:text-base">{form.successMessage}</p>
+        <h3 className="text-xl sm:text-2xl font-bold text-accent mb-2">{form.successTitle}</h3>
+        <p className="text-text-muted text-sm sm:text-base">{form.successMessage}</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-12 shadow-xl border border-slate-100">
+    <div className="bg-surface rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-12 shadow-xl border border-accent/5">
       <div className="text-center mb-8 sm:mb-10">
-        <h3 className="text-xl sm:text-3xl font-black text-slate-900 mb-2 tracking-tight">{form.title}</h3>
-        <p className="text-slate-500 text-xs sm:text-base">{form.subtitle}</p>
+        <h3 className="text-xl sm:text-3xl font-black text-accent mb-2 tracking-tight">{form.title}</h3>
+        <p className="text-text-muted text-xs sm:text-base">{form.subtitle}</p>
       </div>
       
       <form 
@@ -245,7 +244,7 @@ const LeadForm: React.FC = () => {
               name="tipo_plano"
               value={formData.tipo_plano}
               onChange={handleChange}
-              className="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all appearance-none bg-white text-slate-900 text-sm sm:text-base"
+              className="w-full px-5 py-4 rounded-xl border border-accent/10 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none bg-surface text-accent text-sm sm:text-base"
             >
               <option value="">Tipo de plano</option>
               <option value="individual">Individual / Autônomo</option>
@@ -263,7 +262,7 @@ const LeadForm: React.FC = () => {
               min="1"
               value={formData.vidas}
               onChange={handleChange}
-              className="w-full px-5 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-slate-900 text-sm sm:text-base"
+              className="w-full px-5 py-4 rounded-xl border border-accent/10 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-accent text-sm sm:text-base"
             />
           </div>
         </div>
@@ -271,7 +270,7 @@ const LeadForm: React.FC = () => {
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="w-full mt-4 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+          className="w-full mt-4 bg-primary hover:bg-primary-hover disabled:bg-text-muted text-white py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2"
         >
           {status === 'submitting' ? (
             <>
@@ -290,9 +289,9 @@ const LeadForm: React.FC = () => {
           <p className="text-red-500 text-sm text-center mt-3">Erro ao enviar. Tente novamente.</p>
         )}
         
-        <p className="text-center text-slate-400 text-[10px] sm:text-xs mt-4">
+        <p className="text-center text-text-muted text-[10px] sm:text-xs mt-4">
           Ao enviar, você concorda com nossa{' '}
-          <a href="/privacidade" className="underline hover:text-slate-600">Política de Privacidade</a>.
+          <a href="/privacidade" className="underline hover:text-accent">Política de Privacidade</a>.
         </p>
       </form>
     </div>

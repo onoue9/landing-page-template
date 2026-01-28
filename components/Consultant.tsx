@@ -10,17 +10,17 @@ const Consultant: React.FC = () => {
   if (!consultant) return null;
   
   return (
-    <section className="py-20 sm:py-32 bg-white relative overflow-hidden" aria-labelledby="consultant-heading">
+    <section className="py-20 sm:py-32 bg-surface relative overflow-hidden" aria-labelledby="consultant-heading">
       <div className="max-w-7xl mx-auto px-6 sm:px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 id="consultant-heading" className="text-2xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">{consultant.title}</h2>
+          <h2 id="consultant-heading" className="text-2xl sm:text-5xl font-extrabold text-accent tracking-tight">{consultant.title}</h2>
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-slate-50 rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-12 flex flex-col md:flex-row gap-8 items-center border border-slate-100">
+          <div className="bg-background rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-12 flex flex-col md:flex-row gap-8 items-center border border-accent/5">
             {/* Photo */}
             <div className="flex-shrink-0">
-              <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl relative">
+              <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-surface shadow-xl relative">
                 <Image 
                   src={consultant.image} 
                   alt={`Foto de ${consultant.name}`}
@@ -33,15 +33,15 @@ const Consultant: React.FC = () => {
             
             {/* Info */}
             <div className="flex-grow text-center md:text-left">
-              <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-1">{consultant.name}</h3>
-              <p className="text-blue-600 font-bold text-sm sm:text-base mb-4">{consultant.role}</p>
-              <p className="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">{consultant.bio}</p>
+              <h3 className="text-xl sm:text-2xl font-black text-accent mb-1">{consultant.name}</h3>
+              <p className="text-primary font-bold text-sm sm:text-base mb-4">{consultant.role}</p>
+              <p className="text-text-muted leading-relaxed mb-6 text-sm sm:text-base">{consultant.bio}</p>
               
               {/* Credentials */}
               <ul className="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
                 {consultant.credentials.map((cred, idx) => (
-                  <li key={idx} className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-700 bg-white px-3 py-1.5 rounded-full border border-slate-200">
-                    <CheckCircle className="w-4 h-4 text-emerald-500" aria-hidden="true" />
+                  <li key={idx} className="flex items-center gap-1.5 text-xs sm:text-sm text-accent/80 bg-surface px-3 py-1.5 rounded-full border border-accent/10">
+                    <CheckCircle className="w-4 h-4 text-secondary" aria-hidden="true" />
                     {cred}
                   </li>
                 ))}
@@ -50,7 +50,7 @@ const Consultant: React.FC = () => {
               {/* CTA */}
               <a 
                 href={getWhatsAppLink()}
-                className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base shadow-lg transition-all active:scale-95"
+                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base shadow-lg transition-all active:scale-95"
                 aria-label={`Falar com ${consultant.name} via WhatsApp`}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

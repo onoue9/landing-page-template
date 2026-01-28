@@ -8,7 +8,7 @@ const OperatorLogo = ({ name, logoUrl }: { name: string, logoUrl: string }) => {
   const [hasError, setHasError] = useState(false);
 
   if (hasError) {
-    return <span className="text-[10px] font-bold text-slate-400 uppercase">{name}</span>;
+    return <span className="text-[10px] font-bold text-text-muted uppercase">{name}</span>;
   }
 
   return (
@@ -27,11 +27,11 @@ const Operators: React.FC = () => {
   const { operators } = content;
   
   return (
-    <section className="py-16 sm:py-24 bg-white border-y border-slate-50" aria-labelledby="operators-heading">
+    <section className="py-16 sm:py-24 bg-surface border-y border-accent/5" aria-labelledby="operators-heading">
       <div className="max-w-7xl mx-auto px-6 sm:px-4">
         <div className="text-center mb-10 sm:mb-16">
-          <h2 id="operators-heading" className="text-xl sm:text-3xl font-black text-slate-900 mb-2 sm:mb-4 tracking-tight uppercase">{operators.title}</h2>
-          <div className="h-1 w-20 bg-blue-600 mx-auto rounded-full" aria-hidden="true"></div>
+          <h2 id="operators-heading" className="text-xl sm:text-3xl font-black text-accent mb-2 sm:mb-4 tracking-tight uppercase">{operators.title}</h2>
+          <div className="h-1 w-20 bg-primary mx-auto rounded-full" aria-hidden="true"></div>
         </div>
         
         <ul className="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-12 items-center justify-items-center" role="list" aria-label="Lista de operadoras parceiras">
@@ -48,7 +48,7 @@ const Operators: React.FC = () => {
         </ul>
         
         <div className="mt-12 text-center">
-          <p className="text-[10px] sm:text-xs font-bold text-slate-300 uppercase tracking-[0.3em]">Rede Credenciada Nacional</p>
+          <p className="text-[10px] sm:text-xs font-bold text-text-muted uppercase tracking-[0.3em]">Rede Credenciada Nacional</p>
         </div>
       </div>
     </section>
