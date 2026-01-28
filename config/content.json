@@ -98,16 +98,16 @@
   "operators": {
     "title": "Operadoras Parceiras",
     "items": [
-      { "name": "Unimed", "logoUrl": "/logos/unimed.svg" },
-      { "name": "Amil", "logoUrl": "/logos/amil.svg" },
-      { "name": "Bradesco Saúde", "logoUrl": "/logos/bradesco.svg" },
-      { "name": "SulAmérica", "logoUrl": "/logos/sulamerica.svg" },
-      { "name": "Porto Seguro", "logoUrl": "/logos/porto.svg" },
-      { "name": "Hapvida", "logoUrl": "/logos/hapvida.svg" },
-      { "name": "NotreDame Intermédica", "logoUrl": "/logos/notredame.svg" },
-      { "name": "Prevent Senior", "logoUrl": "/logos/prevent.svg" },
-      { "name": "Omint", "logoUrl": "/logos/omint.svg" },
-      { "name": "Sami", "logoUrl": "/logos/sami.svg" }
+      { "name": "Unimed", "logoUrl": "/logos/unimed-seeklogo.png" },
+      { "name": "Amil", "logoUrl": "/logos/amil-seeklogo.png" },
+      { "name": "Bradesco Saúde", "logoUrl": "/logos/bradesco-saude-seeklogo.png" },
+      { "name": "SulAmérica", "logoUrl": "/logos/sulamerica-saude-seeklogo.png" },
+      { "name": "Porto Seguro", "logoUrl": "/logos/porto-seguro-novo-seeklogo.png" },
+      { "name": "Hapvida", "logoUrl": "/logos/hapvida-saude-seeklogo.png" },
+      { "name": "NotreDame Intermédica", "logoUrl": "/logos/grupo-notredame-intermedica-seeklogo.png" },
+      { "name": "Prevent Senior", "logoUrl": "/logos/prevent-senior-seeklogo.png" },
+      { "name": "Omint", "logoUrl": "/logos/omint-seeklogo.png" },
+      { "name": "Sami", "logoUrl": "/logos/sami-300x300.png.webp" }
     ]
   },
   "form": {
