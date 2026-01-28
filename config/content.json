@@ -101,13 +101,13 @@
       { "name": "Unimed", "logoUrl": "/logos/unimed.svg" },
       { "name": "Amil", "logoUrl": "/logos/amil.svg" },
       { "name": "Bradesco Saúde", "logoUrl": "/logos/bradesco.svg" },
-      { "name": "SulAmérica", "logoUrl": "/logos/sulamerica.png" },
+      { "name": "SulAmérica", "logoUrl": "/logos/sulamerica.svg" },
       { "name": "Porto Seguro", "logoUrl": "/logos/porto.svg" },
-      { "name": "Hapvida", "logoUrl": "/logos/hapvida.png" },
-      { "name": "NotreDame Intermédica", "logoUrl": "/logos/notredame.png" },
-      { "name": "Prevent Senior", "logoUrl": "/logos/prevent.png" },
-      { "name": "Omint", "logoUrl": "/logos/omint.png" },
-      { "name": "Sami", "logoUrl": "/logos/sami.png" }
+      { "name": "Hapvida", "logoUrl": "/logos/hapvida.svg" },
+      { "name": "NotreDame Intermédica", "logoUrl": "/logos/notredame.svg" },
+      { "name": "Prevent Senior", "logoUrl": "/logos/prevent.svg" },
+      { "name": "Omint", "logoUrl": "/logos/omint.svg" },
+      { "name": "Sami", "logoUrl": "/logos/sami.svg" }
     ]
   },
   "form": {
