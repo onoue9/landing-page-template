@@ -1,5 +1,6 @@
 {
-  "company": {
+  "site": {
+    "company": {
       "name": "Onoue saúde",
       "tagline": "Consultoria Master de Planos de Saúde",
       "logo": "/logos/logo.svg",
@@ -14,4 +15,22 @@
       "copyright": "Onoue saúde Corretora de Seguros",
       "disclaimer": "A Onoue saúde é uma plataforma de consultoria. Os valores e coberturas são de responsabilidade das respectivas operadoras e podem variar conforme idade e região."
     }
+  },
+  "theme": {
+    "colors": {
+      "primary": "#eb2424",
+      "primaryHover": "#8d1dd7",
+      "secondary": "#bc6c10",
+      "secondaryHover": "#cf66ff",
+      "accent": "#0f172a",
+      "background": "#f8fafc",
+      "surface": "#ffffff",
+      "text": "#0f172a",
+      "textMuted": "#64748b"
+    },
+    "fonts": {
+      "heading": "Plus Jakarta Sans",
+      "body": "Plus Jakarta Sans"
+    }
+  }
 }

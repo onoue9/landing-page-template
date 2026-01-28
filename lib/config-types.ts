@@ -132,6 +132,15 @@ export interface ContentConfig {
     buttonText: string;
     note: string;
   };
+  consultant?: {
+    title: string;
+    name: string;
+    role: string;
+    bio: string;
+    image: string;
+    credentials: string[];
+    whatsappLabel: string;
+  };
 }
 
 // Full config type

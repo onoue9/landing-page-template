@@ -170,5 +170,18 @@
     "subtitle": "As tabelas de preços sofrem reajustes frequentes. Garanta agora as condições atuais e economize de verdade.",
     "buttonText": "Falar com Especialista",
     "note": "Cotação 100% gratuita"
+  },
+  "consultant": {
+    "title": "Seu Consultor Especializado",
+    "name": "João Silva",
+    "role": "Consultor de Planos de Saúde",
+    "bio": "Com mais de 10 anos de experiência no mercado de saúde suplementar, ajudo famílias e empresas a encontrarem a melhor proteção com o melhor custo-benefício. Meu compromisso é oferecer um atendimento transparente e personalizado.",
+    "image": "/consultant.jpg",
+    "credentials": [
+      "Certificado SUSEP",
+      "+500 clientes atendidos",
+      "Especialista em planos empresariais"
+    ],
+    "whatsappLabel": "Falar com João"
   }
 }
