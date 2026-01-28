@@ -7,7 +7,7 @@ const SocialProof: React.FC = () => {
   const { testimonials } = content;
   
   return (
-    <section className="py-20 sm:py-32 relative overflow-hidden bg-surface" aria-labelledby="testimonials-heading">
+    <section id="depoimentos" className="py-20 sm:py-32 relative overflow-hidden bg-surface" aria-labelledby="testimonials-heading">
       <div className="max-w-7xl mx-auto px-6 sm:px-4">
         <div className="text-center mb-12 sm:mb-20">
           <h2 id="testimonials-heading" className="text-2xl sm:text-5xl font-extrabold text-accent tracking-tight">{testimonials.title}</h2>

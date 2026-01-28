@@ -14,7 +14,7 @@ const Steps: React.FC = () => {
   const { steps } = content;
   
   return (
-    <section className="py-20 sm:py-32 bg-surface relative overflow-hidden" aria-labelledby="steps-heading">
+    <section id="como-funciona" className="py-20 sm:py-32 bg-surface relative overflow-hidden" aria-labelledby="steps-heading">
       <div className="max-w-7xl mx-auto px-6 sm:px-4">
         <div className="text-center mb-12 sm:mb-20">
           <h2 id="steps-heading" className="text-2xl sm:text-5xl font-extrabold text-accent mb-4 sm:mb-6 tracking-tight">{steps.title}</h2>

@@ -4,6 +4,15 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { site, getWhatsAppLink } from '@/lib/config';
 
+const navLinks = [
+  { href: '#beneficios', label: 'Benefícios' },
+  { href: '#planos', label: 'Planos' },
+  { href: '#como-funciona', label: 'Como Funciona' },
+  { href: '#depoimentos', label: 'Depoimentos' },
+  { href: '#contato', label: 'Contato' },
+  { href: '#faq', label: 'FAQ' },
+];
+
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,13 +32,17 @@ const Navbar: React.FC = () => {
             <span className="text-base sm:text-lg font-bold text-accent tracking-tight">{site.company.name.split('Pro')[0]}<span className="text-primary">Pro</span></span>
           </a>
           
-          <ul className="hidden md:flex items-center gap-6 lg:gap-10" role="list">
-            <li><a href="#beneficios" className="text-text-muted hover:text-accent font-semibold text-sm transition-colors">Benefícios</a></li>
-            <li><a href="#planos" className="text-text-muted hover:text-accent font-semibold text-sm transition-colors">Planos</a></li>
-            <li><a href="#faq" className="text-text-muted hover:text-accent font-semibold text-sm transition-colors">FAQ</a></li>
+          <ul className="hidden lg:flex items-center gap-5 xl:gap-8" role="list">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} className="text-text-muted hover:text-accent font-semibold text-sm transition-colors">
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
           
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <a 
               href={getWhatsAppLink()}
               className="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md transition-all flex items-center gap-2 active:scale-95"
@@ -40,7 +53,7 @@ const Navbar: React.FC = () => {
           </div>
           
           <button 
-            className="md:hidden p-1.5" 
+            className="lg:hidden p-1.5" 
             aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -50,11 +63,19 @@ const Navbar: React.FC = () => {
         </div>
         
         {mobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-2 border-t border-accent/10 mt-3" role="navigation" aria-label="Menu mobile">
+          <div className="lg:hidden pt-4 pb-2 border-t border-accent/10 mt-3" role="navigation" aria-label="Menu mobile">
             <ul className="flex flex-col gap-3" role="list">
-              <li><a href="#beneficios" className="block py-2 text-text-muted font-semibold" onClick={() => setMobileMenuOpen(false)}>Benefícios</a></li>
-              <li><a href="#planos" className="block py-2 text-text-muted font-semibold" onClick={() => setMobileMenuOpen(false)}>Planos</a></li>
-              <li><a href="#faq" className="block py-2 text-text-muted font-semibold" onClick={() => setMobileMenuOpen(false)}>FAQ</a></li>
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a 
+                    href={link.href} 
+                    className="block py-2 text-text-muted font-semibold" 
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
               <li>
                 <a 
                   href={getWhatsAppLink()}
