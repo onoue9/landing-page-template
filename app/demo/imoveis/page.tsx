@@ -1,7 +1,9 @@
+import { notFound } from 'next/navigation';
 import { demoConfigs } from '@/lib/demo-configs';
 import { ConfigProvider } from '@/contexts/ConfigContext';
 import LandingPage from '@/components/LandingPage';
 
+const IS_CLIENT = !!process.env.NEXT_PUBLIC_CLIENT;
 const { theme } = demoConfigs.imoveis;
 
 const themeCSS = `
@@ -19,6 +21,7 @@ const themeCSS = `
 `;
 
 export default function ImoveisDemoPage() {
+  if (IS_CLIENT) notFound();
   return (
     <ConfigProvider value={demoConfigs.imoveis}>
       <style dangerouslySetInnerHTML={{ __html: themeCSS }} />
