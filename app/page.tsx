@@ -1,44 +1,9 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Benefits from '../components/Benefits';
-import PlanTypes from '../components/PlanTypes';
-import Steps from '../components/Steps';
-import Operators from '../components/Operators';
-import Consultant from '../components/Consultant';
-import LeadForm from '../components/LeadForm';
-import SocialProof from '../components/SocialProof';
-import FAQ from '../components/FAQ';
-import CTASection from '../components/CTASection';
-import Footer from '../components/Footer';
-import WhatsAppButton from '../components/WhatsAppButton';
-import BackToTop from '../components/BackToTop';
-import ScrollProgress from '../components/ui/ScrollProgress';
+import LandingPage from '@/components/LandingPage';
+import PortfolioPage from '@/components/portfolio/PortfolioPage';
+
+const IS_CLIENT = !!process.env.NEXT_PUBLIC_CLIENT;
 
 export default function Home() {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <ScrollProgress />
-      <Navbar />
-      <main className="flex-grow">
-        <Hero />
-        <Benefits />
-        <PlanTypes />
-        <Steps />
-        <Operators />
-        <Consultant />
-        <div id="contato" className="bg-background py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <LeadForm />
-          </div>
-        </div>
-        <SocialProof />
-        <FAQ />
-        <CTASection />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-      <BackToTop />
-    </div>
-  );
+  if (IS_CLIENT) return <LandingPage />;
+  return <PortfolioPage />;
 }
