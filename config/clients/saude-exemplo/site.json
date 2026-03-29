@@ -1,0 +1,46 @@
+{
+  "company": {
+    "name": "VidaSaúde",
+    "namePrefix": "Vida",
+    "nameHighlight": "Saúde",
+    "tagline": "Planos de saúde para você e sua família",
+    "logo": "/logos/logo.svg",
+    "email": "pedro@vidasaude.com.br",
+    "whatsapp": "5511944332211",
+    "whatsappMessage": "Olá Pedro! Vi seu site e gostaria de uma cotação de plano de saúde."
+  },
+  "social": {
+    "instagram": "https://instagram.com/vidasaude",
+    "facebook": "https://facebook.com/vidasaude",
+    "linkedin": "https://linkedin.com/company/vidasaude"
+  },
+  "nav": {
+    "links": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Planos" },
+      { "href": "#como-funciona", "label": "Como Funciona" },
+      { "href": "#precos", "label": "Preços" },
+      { "href": "#depoimentos", "label": "Depoimentos" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "mobileLinks": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Planos" },
+      { "href": "#precos", "label": "Preços" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "cta": "Falar com especialista"
+  },
+  "seo": {
+    "title": "VidaSaúde - Planos de Saúde para Você e Sua Família",
+    "description": "Cotação gratuita de planos de saúde. Pedro Souza, corretor certificado SUSEP com mais de 8 anos de experiência em São Paulo.",
+    "url": "https://vidasaude.com.br",
+    "ogImage": "/og-image.jpg"
+  },
+  "footer": {
+    "copyright": "VidaSaúde Corretora de Seguros",
+    "disclaimer": "A VidaSaúde é uma corretora de seguros habilitada pela SUSEP. Os valores e coberturas são de responsabilidade das respectivas operadoras e podem variar conforme idade e região."
+  }
+}

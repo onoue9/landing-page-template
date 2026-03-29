@@ -1,0 +1,247 @@
+{
+  "layout": {
+    "hero": "hero-b",
+    "benefits": "benefits-b",
+    "steps": "steps-a",
+    "socialProof": "social-b"
+  },
+  "hero": {
+    "badge": "ODONTOLOGIA DE EXCELÊNCIA 2025",
+    "title": "Transforme seu sorriso com",
+    "titleHighlight": "quem é referência em BH",
+    "subtitle": "Dra. Camila Torres, especialista em estética dental e implantes, cuida do seu sorriso com tecnologia de ponta e atendimento acolhedor há mais de 12 anos.",
+    "ctaPrimary": "Agendar com Dra. Camila",
+    "ctaSecondary": "Ver Tratamentos",
+    "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1000",
+    "imageAlt": "Consultório odontológico moderno e acolhedor com equipamentos de última geração",
+    "features": [
+      { "emoji": "😁", "text": "+2.000 sorrisos" },
+      { "emoji": "⚡", "text": "Avaliação grátis" },
+      { "emoji": "⭐", "text": "CRO-MG Ativo" }
+    ]
+  },
+  "benefits": {
+    "title": "Por que escolher a OdontoVita?",
+    "subtitle": "Cuidado completo e personalizado para o seu sorriso",
+    "items": [
+      {
+        "id": 1,
+        "title": "Pagamento Facilitado",
+        "description": "Parcelamento em até 12x sem juros e aceitamos os principais convênios odontológicos de BH.",
+        "icon": "wallet"
+      },
+      {
+        "id": 2,
+        "title": "Atendimento Humanizado",
+        "description": "Dra. Camila e sua equipe tratam cada paciente com empatia, paciência e atenção aos detalhes.",
+        "icon": "user"
+      },
+      {
+        "id": 3,
+        "title": "Tecnologia Avançada",
+        "description": "Scanner 3D, raio-X digital panorâmico e laser de última geração para diagnósticos mais precisos.",
+        "icon": "chart"
+      },
+      {
+        "id": 4,
+        "title": "Garantia nos Procedimentos",
+        "description": "Todos os tratamentos realizados com materiais importados de alta qualidade e garantia técnica.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "planTypes": {
+    "title": "Nossos Tratamentos",
+    "subtitle": "Soluções completas para saúde e beleza do seu sorriso",
+    "items": [
+      {
+        "id": 1,
+        "title": "Estética Dental",
+        "description": "Clareamento a laser, lentes de contato dental e facetas de porcelana para um sorriso de Hollywood.",
+        "image": "https://images.unsplash.com/photo-1559590082-90b6a7491a5a?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Sorriso perfeito e branco após procedimento de estética dental"
+      },
+      {
+        "id": 2,
+        "title": "Implantes Dentários",
+        "description": "Implantes de titânio com carga imediata. Resultado natural e definitivo em poucas sessões.",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Equipamento odontológico moderno utilizado em procedimento de implante"
+      },
+      {
+        "id": 3,
+        "title": "Ortodontia Invisível",
+        "description": "Alinhadores transparentes e aparelhos estéticos para corrigir o sorriso sem comprometer a aparência.",
+        "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Paciente sorridente durante consulta de ortodontia"
+      }
+    ]
+  },
+  "steps": {
+    "title": "Como Funciona?",
+    "subtitle": "3 passos simples para começar seu tratamento",
+    "items": [
+      {
+        "id": 1,
+        "title": "Avaliação Gratuita",
+        "description": "Agende pelo WhatsApp e faça sua avaliação completa com a Dra. Camila, sem nenhum custo.",
+        "icon": "search"
+      },
+      {
+        "id": 2,
+        "title": "Plano Personalizado",
+        "description": "Receba um plano de tratamento detalhado com prazos, valores e condições de pagamento.",
+        "icon": "file-check"
+      },
+      {
+        "id": 3,
+        "title": "Sorriso Transformado",
+        "description": "Inicie seu tratamento com todo conforto e acompanhamento. Resultados visíveis desde a 1ª sessão!",
+        "icon": "party"
+      }
+    ]
+  },
+  "operators": {
+    "title": "Convênios Aceitos",
+    "items": [
+      { "name": "OdontoPrev", "logoUrl": "/logos/odontoprev.svg" },
+      { "name": "Bradesco Dental", "logoUrl": "/logos/bradesco-dental.svg" },
+      { "name": "Amil Dental", "logoUrl": "/logos/amil-dental.svg" },
+      { "name": "SulAmérica Odonto", "logoUrl": "/logos/sulamerica-odonto.svg" },
+      { "name": "Porto Seguro Odonto", "logoUrl": "/logos/porto-seguro-odonto.svg" },
+      { "name": "Unimed Odonto", "logoUrl": "/logos/unimed-odonto.svg" }
+    ]
+  },
+  "form": {
+    "title": "Agende sua Avaliação Gratuita",
+    "subtitle": "Preencha e a Dra. Camila entrará em contato pelo WhatsApp.",
+    "submitButton": "Agendar Minha Avaliação",
+    "successTitle": "Agendamento Solicitado!",
+    "successMessage": "A Dra. Camila entrará em contato via WhatsApp para confirmar seu horário.",
+    "planOptions": [
+      { "value": "clareamento", "label": "Clareamento / Estética" },
+      { "value": "implante", "label": "Implante Dentário" },
+      { "value": "ortodontia", "label": "Ortodontia / Alinhador" },
+      { "value": "limpeza", "label": "Limpeza e Prevenção" },
+      { "value": "avaliacao", "label": "Avaliação Geral" }
+    ]
+  },
+  "testimonials": {
+    "title": "O que nossos pacientes dizem",
+    "items": [
+      {
+        "id": 1,
+        "name": "Mariana Costa",
+        "role": "Empresária",
+        "content": "Fiz lentes de contato dental com a Dra. Camila e o resultado superou todas as expectativas. Profissional impecável, consultório lindo e equipe super acolhedora. Meu sorriso nunca esteve tão bonito!",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Thiago Rezende",
+        "role": "Engenheiro",
+        "content": "Coloquei dois implantes e foi muito mais tranquilo do que eu imaginava. Zero dor no procedimento e resultado perfeito. A Dra. Camila explica cada etapa com muita clareza e segurança.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Beatriz Fonseca",
+        "role": "Professora",
+        "content": "Sempre tive pavor de dentista, mas na OdontoVita me senti em casa. Estou usando alinhador invisível há 4 meses e já vejo diferença enorme. Recomendo de olhos fechados!",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dúvidas Frequentes",
+    "subtitle": "Tudo o que você precisa saber antes de agendar",
+    "items": [
+      {
+        "question": "A avaliação inicial é realmente gratuita?",
+        "answer": "Sim! A primeira consulta é 100% gratuita e sem compromisso. A Dra. Camila faz uma avaliação completa da sua saúde bucal, radiografias digitais quando necessário, e apresenta um plano de tratamento personalizado com todas as opções e valores."
+      },
+      {
+        "question": "O clareamento dental é seguro?",
+        "answer": "Quando realizado por profissional habilitado, o clareamento é totalmente seguro. Utilizamos géis clareadores de última geração e proteção gengival. É normal sentir uma leve sensibilidade temporária que desaparece em 24 a 48 horas."
+      },
+      {
+        "question": "Quanto tempo dura um implante dentário?",
+        "answer": "Com os devidos cuidados e manutenção periódica, um implante pode durar a vida toda. Utilizamos implantes de titânio de marcas reconhecidas internacionalmente, com alta taxa de sucesso (superior a 98% dos casos)."
+      },
+      {
+        "question": "Quais formas de pagamento vocês aceitam?",
+        "answer": "Aceitamos cartão de crédito (até 12x sem juros), débito, Pix e boleto bancário. Também trabalhamos com os principais convênios: OdontoPrev, Bradesco Dental, Amil Dental, SulAmérica e Porto Seguro Odonto."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Seu sorriso merece o melhor cuidado.",
+    "subtitle": "Agende agora sua avaliação gratuita com a Dra. Camila e descubra como transformar seu sorriso com segurança e tecnologia de ponta.",
+    "buttonText": "Agendar com Dra. Camila",
+    "note": "Avaliação inicial 100% gratuita"
+  },
+  "pricing": {
+    "title": "Pacotes de Tratamento",
+    "subtitle": "Opções que cabem no seu bolso",
+    "items": [
+      {
+        "id": 1,
+        "name": "Check-up",
+        "price": "Gratuito",
+        "period": "",
+        "description": "Avaliação completa para começar.",
+        "features": [
+          "Avaliação clínica completa",
+          "Radiografia digital panorâmica",
+          "Plano de tratamento personalizado"
+        ],
+        "highlighted": false,
+        "cta": "Agendar Check-up"
+      },
+      {
+        "id": 2,
+        "name": "Estética Premium",
+        "price": "A partir de R$ 199",
+        "period": "/mês",
+        "description": "Sorriso dos sonhos com parcelamento.",
+        "features": [
+          "Clareamento a laser profissional",
+          "Lentes de contato em porcelana",
+          "Harmonização do sorriso",
+          "Até 12x sem juros",
+          "Acompanhamento pós-procedimento"
+        ],
+        "highlighted": true,
+        "cta": "Falar com Dra. Camila"
+      },
+      {
+        "id": 3,
+        "name": "Implante Completo",
+        "price": "Sob consulta",
+        "period": "",
+        "description": "Reabilitação oral definitiva.",
+        "features": [
+          "Implante de titânio importado",
+          "Coroa em porcelana personalizada",
+          "Cirurgia minimamente invasiva",
+          "Garantia vitalícia do implante"
+        ],
+        "highlighted": false,
+        "cta": "Solicitar Avaliação"
+      }
+    ]
+  },
+  "consultant": {
+    "title": "Sua Dentista Especializada",
+    "name": "Dra. Camila Torres",
+    "role": "Cirurgiã-Dentista CRO-MG 45.812",
+    "bio": "Formada pela PUC Minas e com especialização em Implantodontia e Estética Dental pela USP, a Dra. Camila Torres é referência em Belo Horizonte há mais de 12 anos. Com abordagem humanizada e atualização constante, já transformou mais de 2.000 sorrisos combinando técnica de excelência com tecnologia de ponta.",
+    "image": "/consultant.jpg",
+    "credentials": [
+      "CRO-MG Ativo",
+      "+2.000 pacientes atendidos",
+      "Especialista em Estética e Implantes"
+    ],
+    "whatsappLabel": "Falar com Dra. Camila"
+  }
+}

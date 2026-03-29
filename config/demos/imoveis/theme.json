@@ -1,0 +1,17 @@
+{
+  "colors": {
+    "primary": "#b45309",
+    "primaryHover": "#92400e",
+    "secondary": "#0284c7",
+    "secondaryHover": "#0369a1",
+    "accent": "#1c1917",
+    "background": "#fefce8",
+    "surface": "#ffffff",
+    "text": "#1c1917",
+    "textMuted": "#78716c"
+  },
+  "fonts": {
+    "heading": "Plus Jakarta Sans",
+    "body": "Plus Jakarta Sans"
+  }
+}

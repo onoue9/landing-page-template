@@ -1,0 +1,243 @@
+{
+  "hero": {
+    "badge": "CONSULTORIA PREMIUM 2025",
+    "title": "Saúde de alto padrão com",
+    "titleHighlight": "custo inteligente",
+    "subtitle": "Comparamos as 10 melhores operadoras do Brasil para encontrar a cobertura perfeita com até 40% de economia real.",
+    "ctaPrimary": "Falar com Especialista",
+    "ctaSecondary": "Simular Cotação Online",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1000",
+    "imageAlt": "Médica sorridente em consultório moderno atendendo paciente com atenção e cuidado",
+    "features": [
+      { "emoji": "🛡️", "text": "100% Seguro" },
+      { "emoji": "⚡", "text": "Cotação 5 min" },
+      { "emoji": "⭐", "text": "Suporte VIP" }
+    ]
+  },
+  "benefits": {
+    "title": "Por que escolher nossa consultoria?",
+    "subtitle": "Vantagens exclusivas para você",
+    "items": [
+      {
+        "id": 1,
+        "title": "Economia Garantida",
+        "description": "Analisamos o mercado para encontrar o melhor custo-benefício para sua necessidade.",
+        "icon": "wallet"
+      },
+      {
+        "id": 2,
+        "title": "Atendimento Personalizado",
+        "description": "Um especialista dedicado para entender seu perfil e tirar todas as suas dúvidas.",
+        "icon": "user"
+      },
+      {
+        "id": 3,
+        "title": "Comparação de Planos",
+        "description": "Comparamos as principais operadoras do Brasil em uma única apresentação clara.",
+        "icon": "chart"
+      },
+      {
+        "id": 4,
+        "title": "Suporte Completo",
+        "description": "Assessoria técnica e jurídica antes, durante e após o fechamento do contrato.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "planTypes": {
+    "title": "Tipos de Cobertura",
+    "subtitle": "Soluções adaptadas ao seu momento de vida.",
+    "items": [
+      {
+        "id": 1,
+        "title": "Individual / Autônomo",
+        "description": "Planos pensados para você que busca segurança e rede de atendimento de qualidade.",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Profissional autônomo sorrindo em ambiente de trabalho moderno"
+      },
+      {
+        "id": 2,
+        "title": "Familiar",
+        "description": "Proteção para quem você mais ama com descontos progressivos por dependente.",
+        "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Família feliz reunida em momento de lazer ao ar livre"
+      },
+      {
+        "id": 3,
+        "title": "Empresarial / MEI",
+        "description": "A partir de 2 vidas. Redução de até 40% nos custos em relação ao plano individual.",
+        "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Equipe de profissionais em reunião de negócios colaborativa"
+      }
+    ]
+  },
+  "steps": {
+    "title": "Como Funciona?",
+    "subtitle": "3 passos simples para contratar seu plano ideal",
+    "items": [
+      {
+        "id": 1,
+        "title": "Análise de Perfil",
+        "description": "Entendemos suas necessidades, orçamento e preferências de rede hospitalar.",
+        "icon": "search"
+      },
+      {
+        "id": 2,
+        "title": "Comparação Inteligente",
+        "description": "Apresentamos as melhores opções lado a lado, sem pegadinhas no contrato.",
+        "icon": "file-check"
+      },
+      {
+        "id": 3,
+        "title": "Contratação Simples",
+        "description": "Cuidamos de toda a burocracia. Em poucos dias, sua carteirinha chega!",
+        "icon": "party"
+      }
+    ]
+  },
+  "operators": {
+    "title": "Operadoras Parceiras",
+    "items": [
+      { "name": "Unimed", "logoUrl": "/logos/unimed-seeklogo.png" },
+      { "name": "Amil", "logoUrl": "/logos/amil-seeklogo.png" },
+      { "name": "Bradesco Saúde", "logoUrl": "/logos/bradesco-saude-seeklogo.png" },
+      { "name": "SulAmérica", "logoUrl": "/logos/sulamerica-saude-seeklogo.png" },
+      { "name": "Porto Seguro", "logoUrl": "/logos/porto-seguro-novo-seeklogo.png" },
+      { "name": "Hapvida", "logoUrl": "/logos/hapvida-saude-seeklogo.png" },
+      { "name": "NotreDame Intermédica", "logoUrl": "/logos/grupo-notredame-intermedica-seeklogo.png" },
+      { "name": "Prevent Senior", "logoUrl": "/logos/prevent-senior-seeklogo.png" },
+      { "name": "Omint", "logoUrl": "/logos/omint-seeklogo.png" },
+      { "name": "Sami", "logoUrl": "/logos/sami-300x300.png.webp" }
+    ]
+  },
+  "form": {
+    "title": "Receba seu comparativo agora",
+    "subtitle": "Preencha e receba a melhor oferta no seu WhatsApp.",
+    "submitButton": "Gerar Cotação Agora",
+    "successTitle": "Cotação Enviada!",
+    "successMessage": "Entraremos em contato via WhatsApp em instantes.",
+    "planOptions": [
+      { "value": "individual", "label": "Individual / Autônomo" },
+      { "value": "familiar", "label": "Familiar" },
+      { "value": "empresarial", "label": "Empresarial / MEI" }
+    ]
+  },
+  "testimonials": {
+    "title": "O que nossos clientes dizem",
+    "items": [
+      {
+        "id": 1,
+        "name": "Ricardo Mendes",
+        "role": "Empresário",
+        "content": "Consegui reduzir o custo do plano de saúde da minha empresa em 30% mantendo a mesma rede de hospitais. O atendimento foi impecável.",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Cláudia Oliveira",
+        "role": "Profissional Liberal",
+        "content": "Estava perdida com tantas opções. A corretora me explicou as carências e coberturas de forma simples. Recomendo muito!",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Marcos Silva",
+        "role": "Pai de Família",
+        "content": "Excelente suporte no pós-venda. Tive um problema com um boleto e a corretora resolveu tudo rapidamente com a operadora.",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dúvidas Frequentes",
+    "subtitle": "Tudo o que você precisa saber antes de contratar.",
+    "items": [
+      {
+        "question": "Como funcionam os períodos de carência?",
+        "answer": "Os períodos variam por operadora e procedimento. Urgências têm 24h. Consultas e exames simples geralmente 30 dias. Parto 300 dias. Doenças preexistentes 24 meses. Em casos de portabilidade, é possível reduzir a zero."
+      },
+      {
+        "question": "O que é coparticipação?",
+        "answer": "É uma modalidade onde você paga uma mensalidade menor, e uma pequena taxa quando utiliza consultas ou exames. Ideal para quem usa pouco o plano e quer economizar no custo fixo."
+      },
+      {
+        "question": "Posso incluir dependentes no plano empresarial?",
+        "answer": "Sim! Cônjuges e filhos podem ser incluídos na maioria dos contratos empresariais ou MEI, aproveitando as mesmas tabelas de preços reduzidas."
+      },
+      {
+        "question": "Atendem em todo o Brasil?",
+        "answer": "Depende da abrangência do plano escolhido (Regional ou Nacional). Trabalhamos com todas as opções para adequar à sua necessidade de deslocamento."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Sua saúde não pode esperar mais.",
+    "subtitle": "As tabelas de preços sofrem reajustes frequentes. Garanta agora as condições atuais e economize de verdade.",
+    "buttonText": "Falar com Especialista",
+    "note": "Cotação 100% gratuita"
+  },
+  "pricing": {
+    "title": "Nossos Planos de Atendimento",
+    "subtitle": "Escolha o nível de suporte ideal para o seu momento",
+    "items": [
+      {
+        "id": 1,
+        "name": "Essencial",
+        "price": "Gratuito",
+        "period": "",
+        "description": "Para quem quer uma cotação rápida e objetiva.",
+        "features": [
+          "Comparativo de até 3 operadoras",
+          "Atendimento por WhatsApp",
+          "Envio da proposta por e-mail"
+        ],
+        "highlighted": false,
+        "cta": "Solicitar Cotação"
+      },
+      {
+        "id": 2,
+        "name": "Premium",
+        "price": "Gratuito",
+        "period": "",
+        "description": "Consultoria completa para a melhor decisão.",
+        "features": [
+          "Tudo do plano Essencial",
+          "Análise completa do mercado",
+          "Comparativo de todas as operadoras",
+          "Suporte prioritário pós-contratação",
+          "Revisão anual do contrato"
+        ],
+        "highlighted": true,
+        "cta": "Falar com Especialista"
+      },
+      {
+        "id": 3,
+        "name": "Empresarial",
+        "price": "Sob consulta",
+        "period": "",
+        "description": "Para empresas a partir de 2 vidas.",
+        "features": [
+          "Tudo do plano Premium",
+          "Negociação direta com operadoras",
+          "Gestão de sinistros e reajustes",
+          "Atendimento dedicado para RH"
+        ],
+        "highlighted": false,
+        "cta": "Solicitar Proposta"
+      }
+    ]
+  },
+  "consultant": {
+    "title": "Seu Consultor Especializado",
+    "name": "João Silva",
+    "role": "Consultor de Planos de Saúde",
+    "bio": "Com mais de 10 anos de experiência no mercado de saúde suplementar, ajudo famílias e empresas a encontrarem a melhor proteção com o melhor custo-benefício. Meu compromisso é oferecer um atendimento transparente e personalizado.",
+    "image": "/consultant.jpg",
+    "credentials": [
+      "Certificado SUSEP",
+      "+500 clientes atendidos",
+      "Especialista em planos empresariais"
+    ],
+    "whatsappLabel": "Falar com João"
+  }
+}

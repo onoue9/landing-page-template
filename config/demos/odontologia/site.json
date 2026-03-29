@@ -1,0 +1,44 @@
+{
+  "company": {
+    "name": "SorrirPro",
+    "namePrefix": "Sorrir",
+    "nameHighlight": "Pro",
+    "tagline": "Cuidando do seu sorriso com tecnologia e carinho",
+    "logo": "/logos/logo.svg",
+    "email": "contato@sorrirpro.com.br",
+    "whatsapp": "5531976543210",
+    "whatsappMessage": "Olá! Gostaria de agendar uma consulta."
+  },
+  "social": {
+    "instagram": "https://instagram.com/sorrirpro",
+    "facebook": "https://facebook.com/sorrirpro"
+  },
+  "nav": {
+    "links": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Tratamentos" },
+      { "href": "#como-funciona", "label": "Como Funciona" },
+      { "href": "#depoimentos", "label": "Depoimentos" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "mobileLinks": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Tratamentos" },
+      { "href": "#como-funciona", "label": "Como Funciona" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "cta": "Agendar Consulta"
+  },
+  "seo": {
+    "title": "SorrirPro - Odontologia com tecnologia e carinho",
+    "description": "Clínica odontológica completa com tratamentos modernos, desde clareamento até implantes. Agende sua consulta e transforme seu sorriso.",
+    "url": "https://sorrirpro.com.br",
+    "ogImage": "/og-image.jpg"
+  },
+  "footer": {
+    "copyright": "SorrirPro Odontologia",
+    "disclaimer": "Os tratamentos e valores são de caráter informativo. Consulte nossos especialistas para uma avaliação personalizada."
+  }
+}

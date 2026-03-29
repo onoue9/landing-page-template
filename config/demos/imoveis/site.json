@@ -1,0 +1,45 @@
+{
+  "company": {
+    "name": "ImóvelPro",
+    "namePrefix": "Imóvel",
+    "nameHighlight": "Pro",
+    "tagline": "Sua imobiliária digital de confiança",
+    "logo": "/logos/logo.svg",
+    "email": "contato@imovelpro.com.br",
+    "whatsapp": "5511987654321",
+    "whatsappMessage": "Olá! Gostaria de informações sobre imóveis."
+  },
+  "social": {
+    "instagram": "https://instagram.com/imovelpro",
+    "facebook": "https://facebook.com/imovelpro",
+    "linkedin": "https://linkedin.com/company/imovelpro"
+  },
+  "nav": {
+    "links": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Imóveis" },
+      { "href": "#como-funciona", "label": "Como Funciona" },
+      { "href": "#depoimentos", "label": "Depoimentos" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "mobileLinks": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Imóveis" },
+      { "href": "#como-funciona", "label": "Como Funciona" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "cta": "Falar com corretor"
+  },
+  "seo": {
+    "title": "ImóvelPro - Sua imobiliária digital de confiança",
+    "description": "Encontre o imóvel dos seus sonhos com a consultoria especializada da ImóvelPro. Residencial, comercial e lançamentos em todo o Brasil.",
+    "url": "https://imovelpro.com.br",
+    "ogImage": "/og-image.jpg"
+  },
+  "footer": {
+    "copyright": "ImóvelPro Imobiliária Digital",
+    "disclaimer": "A ImóvelPro é uma plataforma de intermediação imobiliária. Os valores e condições são de responsabilidade dos proprietários e podem variar."
+  }
+}
