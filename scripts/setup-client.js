@@ -2,26 +2,32 @@
 /**
  * Aplica a config do cliente em config/ antes do build.
  *
- * Modo 1 — Variáveis de ambiente (produção/Netlify):
+ * Modo 1 — Repositório privado (produção/Netlify):
  *   NEXT_PUBLIC_CLIENT=joao-silva
- *   CONFIG_SITE='{"company":{"name":"..."},...}'
- *   CONFIG_CONTENT='{"hero":{...},...}'
- *   CONFIG_THEME='{"colors":{...},...}'
+ *   GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx   ← token de leitura
+ *   GITHUB_CLIENTS_REPO=seu-usuario/landing-page-clients
+ *
+ *   O script clona o repo privado e copia a pasta do cliente:
+ *   landing-page-clients/joao-silva/{site,content,theme}.json → config/
  *
  * Modo 2 — Arquivos locais (desenvolvimento):
  *   NEXT_PUBLIC_CLIENT=joao-silva
- *   config/clients/joao-silva/site.json
- *   config/clients/joao-silva/content.json
- *   config/clients/joao-silva/theme.json
+ *   config/clients/joao-silva/{site,content,theme}.json
  *
- * Se NEXT_PUBLIC_CLIENT não estiver definido, o script encerra sem erros
+ * Se NEXT_PUBLIC_CLIENT não estiver definido, encerra sem erros
  * (build de portfólio/demo).
  */
 
-const fs = require('fs');
+const fs   = require('fs');
 const path = require('path');
+const os   = require('os');
+const { execSync } = require('child_process');
 
-const client = process.env.NEXT_PUBLIC_CLIENT;
+const client      = process.env.NEXT_PUBLIC_CLIENT;
+const token       = process.env.GITHUB_TOKEN;
+const clientsRepo = process.env.GITHUB_CLIENTS_REPO;
+
+// ─── Sem cliente definido → build de portfólio/demo ──────────────────────────
 
 if (!client) {
   console.log('[setup-client] Sem NEXT_PUBLIC_CLIENT — build de portfólio/demo.');
@@ -32,36 +38,46 @@ console.log(`[setup-client] Configurando cliente: "${client}"`);
 
 const dest = path.resolve(__dirname, '..', 'config');
 
-// ─── Modo 1: variáveis de ambiente ───────────────────────────────────────────
+// ─── Modo 1: repositório privado ─────────────────────────────────────────────
 
-const ENV_VARS = {
-  'site.json':    process.env.CONFIG_SITE,
-  'content.json': process.env.CONFIG_CONTENT,
-  'theme.json':   process.env.CONFIG_THEME,
-};
+if (token && clientsRepo) {
+  console.log(`[setup-client] Modo: repositório privado (${clientsRepo}).`);
 
-const hasEnvVars = Object.values(ENV_VARS).every(Boolean);
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'lp-clients-'));
 
-if (hasEnvVars) {
-  console.log('[setup-client] Modo: variáveis de ambiente.');
+  try {
+    const repoUrl = `https://${token}@github.com/${clientsRepo}.git`;
 
-  for (const [file, value] of Object.entries(ENV_VARS)) {
-    let parsed;
-    try {
-      parsed = JSON.parse(value);
-    } catch {
-      console.error(`[setup-client] CONFIG_${file.replace('.json', '').toUpperCase()} contém JSON inválido.`);
+    console.log('[setup-client] Clonando repositório de clientes...');
+    execSync(
+      `git clone --depth=1 --quiet "${repoUrl}" "${tmpDir}"`,
+      { stdio: 'pipe' }
+    );
+
+    const clientSrc = path.join(tmpDir, client);
+
+    if (!fs.existsSync(clientSrc)) {
+      console.error(`[setup-client] Cliente "${client}" não encontrado no repositório ${clientsRepo}.`);
+      console.error(`[setup-client] Verifique se a pasta "${client}/" existe no repo de clientes.`);
       process.exit(1);
     }
-    fs.writeFileSync(
-      path.join(dest, file),
-      JSON.stringify(parsed, null, 2),
-      'utf8'
-    );
-    console.log(`[setup-client] ${file} gravado a partir da variável de ambiente.`);
+
+    for (const file of ['site.json', 'content.json', 'theme.json']) {
+      const srcFile = path.join(clientSrc, file);
+      if (!fs.existsSync(srcFile)) {
+        console.error(`[setup-client] Arquivo ausente no repo de clientes: ${client}/${file}`);
+        process.exit(1);
+      }
+      fs.copyFileSync(srcFile, path.join(dest, file));
+      console.log(`[setup-client] ${file} copiado do repositório privado.`);
+    }
+
+    console.log(`[setup-client] Config de "${client}" aplicada com sucesso.`);
+  } finally {
+    // Remove o clone temporário independente de sucesso ou erro
+    fs.rmSync(tmpDir, { recursive: true, force: true });
   }
 
-  console.log(`[setup-client] Config de "${client}" aplicada com sucesso.`);
   process.exit(0);
 }
 
@@ -69,16 +85,17 @@ if (hasEnvVars) {
 
 console.log('[setup-client] Modo: arquivos locais.');
 
-const src = path.resolve(__dirname, '..', 'config', 'clients', client);
+const localSrc = path.resolve(__dirname, '..', 'config', 'clients', client);
 
-if (!fs.existsSync(src)) {
-  console.error(`[setup-client] Pasta não encontrada: ${src}`);
-  console.error('[setup-client] Defina CONFIG_SITE, CONFIG_CONTENT e CONFIG_THEME ou crie a pasta de config local.');
+if (!fs.existsSync(localSrc)) {
+  console.error(`[setup-client] Pasta local não encontrada: ${localSrc}`);
+  console.error('[setup-client] Para produção, defina GITHUB_TOKEN e GITHUB_CLIENTS_REPO.');
+  console.error('[setup-client] Para desenvolvimento, crie config/clients/' + client + '/');
   process.exit(1);
 }
 
 for (const file of ['site.json', 'content.json', 'theme.json']) {
-  const srcFile = path.join(src, file);
+  const srcFile = path.join(localSrc, file);
   if (!fs.existsSync(srcFile)) {
     console.error(`[setup-client] Arquivo ausente: ${srcFile}`);
     process.exit(1);
