@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
-import { Monitor, Tablet, Smartphone, MessageCircle, RotateCcw, ChevronRight } from 'lucide-react';
+import { Monitor, Tablet, Smartphone, MessageCircle, RotateCcw, ChevronRight, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import { demoConfigs } from '@/lib/demo-configs';
 import type { ConfigContextValue } from '@/contexts/ConfigContext';
 
@@ -181,7 +181,27 @@ export default function OdontologiaPreviewClient() {
   const [fields, setFields] = useState(defaultFields);
   const [iframeHeight, setIframeHeight] = useState(3200);
   const [iframeReady, setIframeReady] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [isNarrow, setIsNarrow] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      const narrow = w < 768;
+      setIsNarrow(narrow);
+      if (narrow) setSidebarOpen(false);
+    };
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  useEffect(() => {
+    const w = window.innerWidth;
+    if (w < 640) setDevice('mobile');
+    else if (w < 1024) setDevice('tablet');
+  }, []);
 
   const set = (key: keyof typeof fields) => (value: string) =>
     setFields((prev) => ({ ...prev, [key]: value }));
@@ -276,8 +296,21 @@ export default function OdontologiaPreviewClient() {
   return (
     <div className="flex h-screen overflow-hidden bg-slate-100" style={{ fontFamily: 'sans-serif' }}>
 
+      {/* Backdrop — mobile overlay */}
+      {isNarrow && sidebarOpen && (
+        <div
+          className="fixed inset-0 z-10 bg-black/50"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* ── Left panel ── */}
-      <aside className="w-72 shrink-0 bg-white border-r border-slate-200 flex flex-col overflow-hidden shadow-sm">
+      <aside className={[
+        'bg-white border-r border-slate-200 flex flex-col overflow-hidden shadow-sm transition-all duration-300',
+        isNarrow
+          ? `fixed inset-y-0 left-0 z-20 w-72 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`
+          : `relative shrink-0 ${sidebarOpen ? 'w-72' : 'w-0'}`,
+      ].join(' ')}>
         {/* ── Breadcrumb ── */}
         <nav className="flex items-center gap-1 px-4 py-2 border-b border-slate-100">
           <a href="/" className="text-[11px] font-semibold text-slate-400 hover:text-slate-600 transition-colors whitespace-nowrap">
@@ -377,19 +410,28 @@ export default function OdontologiaPreviewClient() {
       {/* ── Right panel ── */}
       <div className="flex-1 flex flex-col overflow-hidden">
         <div className="h-11 bg-white border-b border-slate-200 flex items-center justify-between px-4 shrink-0">
-          <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-1">
-            {DEVICES.map(({ key, label, icon: Icon }) => (
-              <button
-                key={key}
-                onClick={() => handleDeviceChange(key)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
-                  device === key ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'
-                }`}
-              >
-                <Icon className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">{label}</span>
-              </button>
-            ))}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setSidebarOpen((v) => !v)}
+              title={sidebarOpen ? 'Ocultar painel' : 'Mostrar painel'}
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+            >
+              {sidebarOpen ? <PanelLeftClose className="w-4 h-4" /> : <PanelLeftOpen className="w-4 h-4" />}
+            </button>
+            <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-1">
+              {DEVICES.map(({ key, label, icon: Icon }) => (
+                <button
+                  key={key}
+                  onClick={() => handleDeviceChange(key)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                    device === key ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">{label}</span>
+                </button>
+              ))}
+            </div>
           </div>
           <span className="text-xs text-slate-400 font-mono">{currentDevice.iframeWidth}</span>
         </div>
