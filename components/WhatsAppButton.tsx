@@ -2,12 +2,16 @@
 
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
-import { getWhatsAppLink } from '@/lib/config';
+import { buildWhatsAppLink } from '@/lib/config';
+import { useConfig } from '@/contexts/ConfigContext';
 
 const WhatsAppButton: React.FC = () => {
+  const { site } = useConfig();
+  const waLink = buildWhatsAppLink(site.company.whatsapp, site.company.whatsappMessage);
+
   return (
     <a
-      href={getWhatsAppLink()}
+      href={waLink}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-[#25D366] hover:bg-[#1da851] text-white p-3.5 sm:p-4 rounded-full shadow-xl transition-all active:scale-90 flex items-center gap-2 group"

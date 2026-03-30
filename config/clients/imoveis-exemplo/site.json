@@ -1,0 +1,46 @@
+{
+  "company": {
+    "name": "LarIdeal",
+    "namePrefix": "Lar",
+    "nameHighlight": "Ideal",
+    "tagline": "O imóvel certo para o seu momento",
+    "logo": "/logos/logo.svg",
+    "email": "rafael@larideal.com.br",
+    "whatsapp": "5511955443322",
+    "whatsappMessage": "Olá Rafael! Vi seu site e gostaria de informações sobre imóveis."
+  },
+  "social": {
+    "instagram": "https://instagram.com/larideal",
+    "facebook": "https://facebook.com/larideal",
+    "linkedin": "https://linkedin.com/company/larideal"
+  },
+  "nav": {
+    "links": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Imóveis" },
+      { "href": "#como-funciona", "label": "Como Funciona" },
+      { "href": "#precos", "label": "Serviços" },
+      { "href": "#depoimentos", "label": "Depoimentos" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "mobileLinks": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Imóveis" },
+      { "href": "#precos", "label": "Serviços" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "cta": "Falar com Rafael"
+  },
+  "seo": {
+    "title": "LarIdeal - Imóveis em São Paulo com Atendimento Personalizado",
+    "description": "Encontre o imóvel perfeito em SP com Rafael Duarte, corretor CRECI com mais de 10 anos de experiência. Compra, venda e locação.",
+    "url": "https://larideal.com.br",
+    "ogImage": "/og-image.jpg"
+  },
+  "footer": {
+    "copyright": "LarIdeal Imobiliária",
+    "disclaimer": "A LarIdeal é uma imobiliária registrada no CRECI-SP. Os valores e condições são de responsabilidade dos proprietários e podem sofrer alterações sem aviso prévio."
+  }
+}

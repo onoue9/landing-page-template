@@ -1,0 +1,247 @@
+{
+  "layout": {
+    "hero": "hero-c",
+    "benefits": "benefits-a",
+    "steps": "steps-b",
+    "socialProof": "social-a"
+  },
+  "hero": {
+    "badge": "IMÓVEIS EM SÃO PAULO 2025",
+    "title": "Seu próximo imóvel com",
+    "titleHighlight": "quem conhece cada bairro de SP",
+    "subtitle": "Rafael Duarte, corretor com mais de 10 anos de mercado em São Paulo, encontra o imóvel perfeito para o seu momento — seja para morar, investir ou empreender.",
+    "ctaPrimary": "Falar com Rafael",
+    "ctaSecondary": "Ver Imóveis em Destaque",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000",
+    "imageAlt": "Apartamento moderno com vista panorâmica da cidade de São Paulo",
+    "features": [
+      { "emoji": "🏡", "text": "+350 imóveis" },
+      { "emoji": "⚡", "text": "Visita em 24h" },
+      { "emoji": "⭐", "text": "CRECI-SP Ativo" }
+    ]
+  },
+  "benefits": {
+    "title": "Por que escolher a LarIdeal?",
+    "subtitle": "Vantagens de ter um corretor que realmente entende o mercado paulistano",
+    "items": [
+      {
+        "id": 1,
+        "title": "Negociação Estratégica",
+        "description": "Rafael conhece o valor real de cada região de SP e negocia as melhores condições de preço e financiamento.",
+        "icon": "wallet"
+      },
+      {
+        "id": 2,
+        "title": "Atendimento Exclusivo",
+        "description": "Um corretor dedicado que entende seu perfil, orçamento e estilo de vida para filtrar as melhores opções.",
+        "icon": "user"
+      },
+      {
+        "id": 3,
+        "title": "Inteligência de Mercado",
+        "description": "Relatórios atualizados de valorização por bairro, comparativo de preços e tendências do mercado imobiliário de SP.",
+        "icon": "chart"
+      },
+      {
+        "id": 4,
+        "title": "Segurança Total",
+        "description": "Documentação verificada por advogados especializados. Transação 100% segura do início ao registro.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "planTypes": {
+    "title": "Tipos de Imóvel",
+    "subtitle": "Soluções para cada objetivo e momento da sua vida",
+    "items": [
+      {
+        "id": 1,
+        "title": "Apartamentos",
+        "description": "Studios, 2 e 3 dormitórios nos melhores bairros de SP. Do Butantã à Vila Mariana, da Consolação ao Tatuapé.",
+        "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Apartamento amplo e iluminado com decoração moderna em São Paulo"
+      },
+      {
+        "id": 2,
+        "title": "Casas e Sobrados",
+        "description": "Casas em condomínio fechado e sobrados em bairros residenciais com ótima infraestrutura e segurança.",
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Casa moderna com jardim em condomínio residencial fechado"
+      },
+      {
+        "id": 3,
+        "title": "Salas Comerciais",
+        "description": "Espaços comerciais estratégicos na Paulista, Faria Lima, Berrini e outras regiões de alto fluxo empresarial.",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Escritório comercial moderno em região empresarial de São Paulo"
+      }
+    ]
+  },
+  "steps": {
+    "title": "Como Funciona?",
+    "subtitle": "3 passos para encontrar o imóvel ideal em SP",
+    "items": [
+      {
+        "id": 1,
+        "title": "Conversa Inicial",
+        "description": "Rafael entende suas necessidades, orçamento, bairros de interesse e condições de pagamento ideais.",
+        "icon": "search"
+      },
+      {
+        "id": 2,
+        "title": "Curadoria e Visitas",
+        "description": "Receba uma seleção personalizada dos melhores imóveis e agende visitas nos horários mais convenientes.",
+        "icon": "file-check"
+      },
+      {
+        "id": 3,
+        "title": "Proposta e Fechamento",
+        "description": "Negociamos a melhor condição e cuidamos de toda a documentação. As chaves são suas em poucos dias!",
+        "icon": "party"
+      }
+    ]
+  },
+  "operators": {
+    "title": "Parceiros e Certificações",
+    "items": [
+      { "name": "CRECI-SP", "logoUrl": "/logos/creci-sp.svg" },
+      { "name": "Secovi-SP", "logoUrl": "/logos/secovi-sp.svg" },
+      { "name": "Caixa Econômica", "logoUrl": "/logos/caixa-economica.svg" },
+      { "name": "Itaú Imóveis", "logoUrl": "/logos/itau-imoveis.svg" },
+      { "name": "Santander Financiamento", "logoUrl": "/logos/santander-fin.svg" },
+      { "name": "Bradesco Imóveis", "logoUrl": "/logos/bradesco-imoveis.svg" }
+    ]
+  },
+  "form": {
+    "title": "Fale com Rafael Agora",
+    "subtitle": "Preencha e receba atendimento personalizado no seu WhatsApp em minutos.",
+    "submitButton": "Quero Encontrar Meu Imóvel",
+    "successTitle": "Mensagem Enviada!",
+    "successMessage": "Rafael entrará em contato via WhatsApp em instantes.",
+    "planOptions": [
+      { "value": "comprar-apto", "label": "Comprar Apartamento" },
+      { "value": "comprar-casa", "label": "Comprar Casa" },
+      { "value": "alugar", "label": "Alugar" },
+      { "value": "comercial", "label": "Sala Comercial" },
+      { "value": "investimento", "label": "Investimento" }
+    ]
+  },
+  "testimonials": {
+    "title": "O que nossos clientes dizem",
+    "items": [
+      {
+        "id": 1,
+        "name": "Amanda Ribeiro",
+        "role": "Compradora - Vila Mariana",
+        "content": "O Rafael encontrou o apartamento perfeito pra mim em menos de 3 semanas. Ele já conhecia o prédio, sabia do histórico de valorização do bairro e negociou um desconto que eu jamais conseguiria sozinha.",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Henrique Prado",
+        "role": "Investidor - Pinheiros",
+        "content": "Já comprei dois imóveis com a LarIdeal. O relatório de mercado que o Rafael prepara é impressionante — comparativo completo de preço/m², taxa de vacância e projeção de valorização. Investimento certeiro.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Daniela e Marcos",
+        "role": "Locatários - Moema",
+        "content": "Mudança sem estresse! Todo o processo de locação foi resolvido em 10 dias. Documentação, vistoria e contrato — o Rafael cuidou de tudo com muita agilidade e transparência. Super recomendamos!",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dúvidas Frequentes",
+    "subtitle": "Tudo o que você precisa saber antes de comprar ou alugar em SP",
+    "items": [
+      {
+        "question": "Quais documentos preciso para comprar um imóvel?",
+        "answer": "Para pessoa física: RG, CPF, comprovante de renda dos últimos 3 meses, comprovante de residência e certidão de estado civil. Para financiamento, o banco pode solicitar extratos e declaração de IR. O Rafael orienta você em cada etapa da documentação."
+      },
+      {
+        "question": "Como funciona o financiamento imobiliário?",
+        "answer": "Você pode usar FGTS como entrada e financiar pelo SBPE (taxa de mercado) ou Minha Casa Minha Vida (para imóveis até R$ 350 mil). Prazos de até 35 anos com juros a partir de 8,99% a.a. O Rafael compara as condições dos principais bancos para encontrar a melhor taxa."
+      },
+      {
+        "question": "A consultoria tem algum custo para o comprador?",
+        "answer": "Na grande maioria dos casos, o comprador não paga comissão — a corretagem é responsabilidade do vendedor, conforme tabela do CRECI-SP. Todo o atendimento, curadoria de imóveis e suporte documental são inclusos sem custo adicional."
+      },
+      {
+        "question": "Quanto tempo leva para fechar um negócio?",
+        "answer": "Compra à vista: 15 a 30 dias após proposta aceita. Financiamento: 30 a 60 dias para aprovação e registro. Locação: 7 a 15 dias. O Rafael agiliza cada etapa para reduzir ao máximo o prazo de conclusão."
+      }
+    ]
+  },
+  "cta": {
+    "title": "O imóvel certo está esperando por você.",
+    "subtitle": "O mercado em SP está aquecido e os melhores negócios não duram. Fale com Rafael agora e saia na frente com orientação profissional.",
+    "buttonText": "Falar com Rafael",
+    "note": "Atendimento 100% gratuito"
+  },
+  "pricing": {
+    "title": "Nossos Serviços",
+    "subtitle": "Níveis de atendimento para cada necessidade",
+    "items": [
+      {
+        "id": 1,
+        "name": "Busca Express",
+        "price": "Gratuito",
+        "period": "",
+        "description": "Para quem já sabe o que quer.",
+        "features": [
+          "Curadoria de até 5 imóveis",
+          "Agendamento de visitas",
+          "Atendimento por WhatsApp"
+        ],
+        "highlighted": false,
+        "cta": "Iniciar Busca"
+      },
+      {
+        "id": 2,
+        "name": "Consultoria Completa",
+        "price": "Gratuito",
+        "period": "",
+        "description": "Assessoria completa do início ao fim.",
+        "features": [
+          "Tudo da Busca Express",
+          "Relatório de mercado personalizado",
+          "Negociação estratégica de preço",
+          "Acompanhamento de financiamento",
+          "Suporte jurídico e documental"
+        ],
+        "highlighted": true,
+        "cta": "Falar com Rafael"
+      },
+      {
+        "id": 3,
+        "name": "Investidor",
+        "price": "Sob consulta",
+        "period": "",
+        "description": "Para quem quer rentabilidade.",
+        "features": [
+          "Tudo da Consultoria Completa",
+          "Análise de rentabilidade por região",
+          "Projeção de valorização 5 anos",
+          "Gestão de portfólio imobiliário"
+        ],
+        "highlighted": false,
+        "cta": "Solicitar Análise"
+      }
+    ]
+  },
+  "consultant": {
+    "title": "Seu Corretor em São Paulo",
+    "name": "Rafael Duarte",
+    "role": "Corretor de Imóveis CRECI-SP 198.745",
+    "bio": "Com mais de 10 anos de experiência no mercado imobiliário paulistano, Rafael Duarte é especialista em apartamentos residenciais e investimentos imobiliários nas zonas sul e oeste de SP. Já intermediou mais de 250 negócios com foco em transparência, agilidade e o melhor custo-benefício para cada cliente.",
+    "image": "/consultant.jpg",
+    "credentials": [
+      "CRECI-SP Ativo",
+      "+250 negócios fechados",
+      "Especialista em SP Zona Sul/Oeste"
+    ],
+    "whatsappLabel": "Falar com Rafael"
+  }
+}

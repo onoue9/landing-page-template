@@ -1,0 +1,189 @@
+{
+  "hero": {
+    "badge": "IMOBILIÁRIA DIGITAL 2025",
+    "title": "Encontre o imóvel perfeito com",
+    "titleHighlight": "quem entende do mercado",
+    "subtitle": "Da busca à assinatura do contrato, nossos corretores especializados guiam você em cada etapa com transparência e agilidade.",
+    "ctaPrimary": "Falar com Corretor",
+    "ctaSecondary": "Ver Imóveis Disponíveis",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000",
+    "imageAlt": "Apartamento moderno com vista para a cidade ao entardecer",
+    "features": [
+      { "emoji": "🏡", "text": "+500 imóveis" },
+      { "emoji": "⚡", "text": "Visita hoje" },
+      { "emoji": "⭐", "text": "CRECI ativo" }
+    ]
+  },
+  "benefits": {
+    "title": "Por que escolher a ImóvelPro?",
+    "subtitle": "Vantagens que fazem a diferença na sua negociação",
+    "items": [
+      {
+        "id": 1,
+        "title": "Melhor Negociação",
+        "description": "Conhecemos o mercado e negociamos as melhores condições de preço e financiamento para você.",
+        "icon": "wallet"
+      },
+      {
+        "id": 2,
+        "title": "Corretor Dedicado",
+        "description": "Um profissional exclusivo para entender seu perfil e encontrar o imóvel ideal para o seu momento.",
+        "icon": "user"
+      },
+      {
+        "id": 3,
+        "title": "Análise de Mercado",
+        "description": "Relatórios atualizados com valorização da região, comparativo de preços e tendências do mercado.",
+        "icon": "chart"
+      },
+      {
+        "id": 4,
+        "title": "Segurança Jurídica",
+        "description": "Toda a documentação analisada por especialistas para garantir uma transação 100% segura.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "planTypes": {
+    "title": "Tipos de Imóvel",
+    "subtitle": "Soluções para cada momento da sua vida",
+    "items": [
+      {
+        "id": 1,
+        "title": "Residencial",
+        "description": "Apartamentos, casas e coberturas nas melhores localizações. Compra, venda e locação com total suporte.",
+        "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Apartamento moderno e decorado com sala de estar ampla e iluminada"
+      },
+      {
+        "id": 2,
+        "title": "Comercial",
+        "description": "Salas, lojas e galpões para o seu negócio crescer. Localizações estratégicas com ótimo fluxo.",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Escritório comercial moderno com espaço aberto e iluminação natural"
+      },
+      {
+        "id": 3,
+        "title": "Lançamentos",
+        "description": "Os melhores lançamentos com condições especiais de pré-venda. Invista agora e valorize seu patrimônio.",
+        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Construção moderna de empreendimento residencial de alto padrão"
+      }
+    ]
+  },
+  "steps": {
+    "title": "Como Funciona?",
+    "subtitle": "3 passos para encontrar e fechar o imóvel dos seus sonhos",
+    "items": [
+      {
+        "id": 1,
+        "title": "Entenda seu Perfil",
+        "description": "Conversamos sobre suas necessidades, orçamento, localização desejada e condições de pagamento.",
+        "icon": "search"
+      },
+      {
+        "id": 2,
+        "title": "Visita e Proposta",
+        "description": "Selecionamos as melhores opções, agendamos visitas e preparamos a proposta com as melhores condições.",
+        "icon": "file-check"
+      },
+      {
+        "id": 3,
+        "title": "Contrato Assinado",
+        "description": "Cuidamos de toda a documentação e burocracia. Em poucos dias, as chaves estão na sua mão!",
+        "icon": "party"
+      }
+    ]
+  },
+  "operators": {
+    "title": "Parceiros e Certificações",
+    "items": [
+      { "name": "CRECI-SP", "logoUrl": "" },
+      { "name": "COFECI", "logoUrl": "" },
+      { "name": "Secovi-SP", "logoUrl": "" },
+      { "name": "Caixa Econômica", "logoUrl": "" },
+      { "name": "Banco do Brasil", "logoUrl": "" },
+      { "name": "Itaú Imóveis", "logoUrl": "" }
+    ]
+  },
+  "form": {
+    "title": "Fale com um Corretor Agora",
+    "subtitle": "Preencha e receba atendimento personalizado no seu WhatsApp.",
+    "submitButton": "Quero Ver Imóveis",
+    "successTitle": "Mensagem Enviada!",
+    "successMessage": "Nosso corretor entrará em contato via WhatsApp em instantes.",
+    "planOptions": [
+      { "value": "comprar", "label": "Comprar" },
+      { "value": "alugar", "label": "Alugar" },
+      { "value": "lancamento", "label": "Lançamento" },
+      { "value": "investimento", "label": "Investimento" }
+    ]
+  },
+  "testimonials": {
+    "title": "O que nossos clientes dizem",
+    "items": [
+      {
+        "id": 1,
+        "name": "Fernanda Costa",
+        "role": "Compradora",
+        "content": "Encontrei meu apartamento dos sonhos em menos de 30 dias. O corretor entendeu exatamente o que eu precisava e me apresentou opções perfeitas dentro do meu orçamento.",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Roberto Almeida",
+        "role": "Investidor",
+        "content": "Já fechei três negócios pela ImóvelPro. A análise de mercado que eles fornecem é completa e me ajudou a tomar decisões muito seguras. Excelente profissionalismo.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Priscila Nunes",
+        "role": "Locatária",
+        "content": "Aluguel sem dor de cabeça! Todo o processo foi ágil, a documentação foi tratada com cuidado e me mudei no prazo combinado. Recomendo demais!",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dúvidas Frequentes",
+    "subtitle": "Tudo o que você precisa saber antes de comprar ou alugar.",
+    "items": [
+      {
+        "question": "Quais documentos são necessários para comprar um imóvel?",
+        "answer": "Para pessoa física, são necessários RG, CPF, comprovante de renda dos últimos 3 meses, comprovante de residência atualizado e certidão de estado civil. Para financiamento, o banco pode solicitar documentos adicionais. Cuidamos de toda a orientação durante o processo."
+      },
+      {
+        "question": "Como funciona o financiamento habitacional?",
+        "answer": "Você pode usar o FGTS como entrada, financiar pelo SBPE ou pelo programa Minha Casa Minha Vida, dependendo da faixa de renda. O prazo pode chegar a 35 anos e os juros variam conforme o banco e o seu perfil de crédito. Nossa equipe orienta você a escolher a melhor opção."
+      },
+      {
+        "question": "Qual é a taxa de corretagem cobrada?",
+        "answer": "A taxa de corretagem segue a tabela do CRECI e é de responsabilidade do vendedor/locador. Em muitos casos, o comprador ou locatário não paga corretagem diretamente. Tudo é informado com transparência antes de qualquer negociação."
+      },
+      {
+        "question": "Quanto tempo leva para fechar o negócio?",
+        "answer": "O tempo médio de compra à vista é de 15 a 30 dias após a proposta aceita. Financiamentos podem levar de 30 a 60 dias para aprovação e registro. Locações costumam ser concluídas em 7 a 15 dias. Agilizamos cada etapa para reduzir o prazo ao máximo."
+      }
+    ]
+  },
+  "cta": {
+    "title": "O imóvel dos seus sonhos está esperando.",
+    "subtitle": "O mercado imobiliário está aquecido e os melhores imóveis saem rápido. Entre em contato agora e saia na frente.",
+    "buttonText": "Falar com Corretor",
+    "note": "Atendimento 100% gratuito"
+  },
+  "consultant": {
+    "title": "Seu Corretor Especializado",
+    "name": "Carlos Andrade",
+    "role": "Corretor de Imóveis CRECI-SP",
+    "bio": "Com mais de 15 anos de atuação no mercado imobiliário paulista, Carlos Andrade é especialista em lançamentos e imóveis residenciais de alto padrão. Já fechou mais de 300 negócios com clientes satisfeitos, sempre priorizando a transparência e o melhor custo-benefício para cada perfil.",
+    "image": "/consultant.jpg",
+    "credentials": [
+      "CRECI Ativo",
+      "+300 negócios fechados",
+      "Especialista em lançamentos"
+    ],
+    "whatsappLabel": "Falar com Carlos"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "hero": {
+    "badge": "ODONTOLOGIA AVANÇADA 2025",
+    "title": "Seu sorriso perfeito começa com",
+    "titleHighlight": "quem realmente cuida",
+    "subtitle": "Tratamentos modernos e humanizados, do clareamento ao implante, com tecnologia de ponta e profissionais apaixonados pelo que fazem.",
+    "ctaPrimary": "Agendar Consulta",
+    "ctaSecondary": "Conhecer Tratamentos",
+    "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1000",
+    "imageAlt": "Dentista sorridente em consultório moderno com equipamentos de última geração",
+    "features": [
+      { "emoji": "😁", "text": "Sorriso Garantido" },
+      { "emoji": "⚡", "text": "Agendamento rápido" },
+      { "emoji": "⭐", "text": "CRO Ativo" }
+    ]
+  },
+  "benefits": {
+    "title": "Por que escolher a SorrirPro?",
+    "subtitle": "Cuidado completo com o seu sorriso em um só lugar",
+    "items": [
+      {
+        "id": 1,
+        "title": "Planos de Pagamento",
+        "description": "Tratamentos acessíveis com parcelamento facilitado e aceitamos os principais convênios odontológicos.",
+        "icon": "wallet"
+      },
+      {
+        "id": 2,
+        "title": "Atendimento Humanizado",
+        "description": "Profissionais acolhedores e pacientes para garantir sua tranquilidade em cada consulta.",
+        "icon": "user"
+      },
+      {
+        "id": 3,
+        "title": "Tecnologia de Ponta",
+        "description": "Equipamentos modernos como raio-X digital, scanner intraoral e laser odontológico para mais precisão.",
+        "icon": "chart"
+      },
+      {
+        "id": 4,
+        "title": "Garantia dos Tratamentos",
+        "description": "Todos os procedimentos realizados com materiais de alta qualidade e garantia técnica nos resultados.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "planTypes": {
+    "title": "Nossos Tratamentos",
+    "subtitle": "Soluções completas para a saúde e beleza do seu sorriso",
+    "items": [
+      {
+        "id": 1,
+        "title": "Clareamento e Estética",
+        "description": "Clareamento a laser, facetas de porcelana e resinas para um sorriso mais branco e harmonioso.",
+        "image": "https://images.unsplash.com/photo-1559590082-90b6a7491a5a?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Sorriso bonito com dentes brancos e alinhados após tratamento estético"
+      },
+      {
+        "id": 2,
+        "title": "Ortodontia",
+        "description": "Aparelhos metálicos, cerâmicos e alinhadores invisíveis para dentes alinhados e mordida correta.",
+        "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Paciente com aparelho ortodôntico sorrindo durante consulta odontológica"
+      },
+      {
+        "id": 3,
+        "title": "Implantes",
+        "description": "Reposição de dentes com implantes de titânio de alta durabilidade, com resultado natural e definitivo.",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+        "imageAlt": "Consultório odontológico moderno com cadeira e equipamentos de última geração"
+      }
+    ]
+  },
+  "steps": {
+    "title": "Como Funciona?",
+    "subtitle": "3 passos simples para começar o seu tratamento",
+    "items": [
+      {
+        "id": 1,
+        "title": "Avaliação Gratuita",
+        "description": "Agende sua consulta inicial para que nossos especialistas avaliem sua saúde bucal sem custo.",
+        "icon": "search"
+      },
+      {
+        "id": 2,
+        "title": "Plano de Tratamento",
+        "description": "Apresentamos um plano personalizado com os tratamentos indicados, prazos e condições de pagamento.",
+        "icon": "file-check"
+      },
+      {
+        "id": 3,
+        "title": "Transformação do Sorriso",
+        "description": "Realizamos os procedimentos com todo o conforto e cuidado. Resultado garantido desde a primeira sessão!",
+        "icon": "party"
+      }
+    ]
+  },
+  "operators": {
+    "title": "Convênios Aceitos",
+    "items": [
+      { "name": "Unimed Odonto", "logoUrl": "" },
+      { "name": "OdontoPrev", "logoUrl": "" },
+      { "name": "Bradesco Dental", "logoUrl": "" },
+      { "name": "Porto Seguro Odonto", "logoUrl": "" },
+      { "name": "SulAmérica Odonto", "logoUrl": "" },
+      { "name": "Amil Dental", "logoUrl": "" }
+    ]
+  },
+  "form": {
+    "title": "Agende sua Avaliação Gratuita",
+    "subtitle": "Preencha e nossa equipe entrará em contato para confirmar seu horário.",
+    "submitButton": "Agendar Minha Consulta",
+    "successTitle": "Agendamento Solicitado!",
+    "successMessage": "Nossa equipe entrará em contato via WhatsApp para confirmar seu horário.",
+    "planOptions": [
+      { "value": "clareamento", "label": "Clareamento" },
+      { "value": "ortodontia", "label": "Ortodontia" },
+      { "value": "implante", "label": "Implante" },
+      { "value": "limpeza", "label": "Limpeza" },
+      { "value": "avaliacao", "label": "Avaliação Geral" }
+    ]
+  },
+  "testimonials": {
+    "title": "O que nossos pacientes dizem",
+    "items": [
+      {
+        "id": 1,
+        "name": "Juliana Ferreira",
+        "role": "Paciente",
+        "content": "Fiz o clareamento a laser e fiquei impressionada com o resultado. Dentes visivelmente mais brancos logo na primeira sessão. A equipe foi super atenciosa e me deixou completamente à vontade.",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Bruno Martins",
+        "role": "Paciente",
+        "content": "Coloquei implante após indicação de um amigo e não me arrependo. O processo foi tranquilo, sem dor, e o resultado ficou idêntico ao dente natural. Profissionalismo impecável!",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Larissa Campos",
+        "role": "Paciente",
+        "content": "Tinha muito medo de dentista, mas na SorrirPro me senti acolhida desde o primeiro atendimento. Estou usando alinhador invisível há 6 meses e já vejo uma diferença enorme no meu sorriso.",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Dúvidas Frequentes",
+    "subtitle": "Tudo o que você precisa saber antes de agendar.",
+    "items": [
+      {
+        "question": "O clareamento dental machuca os dentes?",
+        "answer": "Quando realizado por um profissional habilitado, o clareamento é seguro. É normal sentir uma leve sensibilidade durante e após o procedimento, que desaparece em poucos dias. Utilizamos géis de alta qualidade e fotoproteção para garantir sua segurança."
+      },
+      {
+        "question": "Quanto tempo dura o tratamento com aparelho ortodôntico?",
+        "answer": "O tempo médio varia de 12 a 36 meses, dependendo da complexidade do caso. Em casos simples com alinhadores invisíveis, o tratamento pode ser mais curto. Na avaliação inicial, o ortodontista apresenta uma estimativa personalizada para o seu caso."
+      },
+      {
+        "question": "O implante dentário é doloroso?",
+        "answer": "O procedimento é realizado com anestesia local, portanto não causa dor durante a cirurgia. No pós-operatório, pode ocorrer leve desconforto por 2 a 3 dias, controlado com analgésicos. A maioria dos pacientes relata que foi muito mais tranquilo do que imaginavam."
+      },
+      {
+        "question": "Vocês atendem convênio odontológico?",
+        "answer": "Sim! Aceitamos os principais convênios odontológicos do mercado, incluindo OdontoPrev, Bradesco Dental, Unimed Odonto, SulAmérica Odonto, Porto Seguro Odonto e Amil Dental. Entre em contato para verificar a cobertura do seu plano para o tratamento desejado."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Seu sorriso pode ser ainda melhor.",
+    "subtitle": "Agende sua avaliação gratuita e descubra os tratamentos ideais para transformar o seu sorriso com segurança e tecnologia.",
+    "buttonText": "Agendar Avaliação Gratuita",
+    "note": "Avaliação inicial 100% gratuita"
+  },
+  "consultant": {
+    "title": "Conheça Nossa Dentista",
+    "name": "Dra. Ana Lima",
+    "role": "Cirurgiã-Dentista CRO-MG",
+    "bio": "Graduada pela UFMG e especialista em Odontologia Estética e Implantodontia, a Dra. Ana Lima acumula mais de 10 anos de experiência transformando sorrisos. Com uma abordagem humanizada e atualização constante nas técnicas mais modernas, é referência em Belo Horizonte em estética dental e implantes.",
+    "image": "/consultant.jpg",
+    "credentials": [
+      "CRO Ativo",
+      "+800 pacientes atendidos",
+      "Especialista em estética dental"
+    ],
+    "whatsappLabel": "Falar com Dra. Ana"
+  }
+}

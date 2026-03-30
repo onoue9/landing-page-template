@@ -1,0 +1,46 @@
+{
+  "company": {
+    "name": "OdontoVita",
+    "namePrefix": "Odonto",
+    "nameHighlight": "Vita",
+    "tagline": "Seu sorriso, nossa especialidade",
+    "logo": "/logos/logo.svg",
+    "email": "dra.camila@odontovita.com.br",
+    "whatsapp": "5531988776655",
+    "whatsappMessage": "Olá Dra. Camila! Vi seu site e gostaria de agendar uma avaliação."
+  },
+  "social": {
+    "instagram": "https://instagram.com/odontovita",
+    "facebook": "https://facebook.com/odontovita",
+    "linkedin": null
+  },
+  "nav": {
+    "links": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Tratamentos" },
+      { "href": "#como-funciona", "label": "Como Funciona" },
+      { "href": "#precos", "label": "Preços" },
+      { "href": "#depoimentos", "label": "Depoimentos" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "mobileLinks": [
+      { "href": "#beneficios", "label": "Benefícios" },
+      { "href": "#planos", "label": "Tratamentos" },
+      { "href": "#precos", "label": "Preços" },
+      { "href": "#contato", "label": "Contato" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "cta": "Agendar com Dra. Camila"
+  },
+  "seo": {
+    "title": "OdontoVita - Clínica Odontológica em Belo Horizonte",
+    "description": "Tratamentos odontológicos de excelência com a Dra. Camila Torres. Clareamento, implantes e ortodontia em BH. Agende sua avaliação gratuita.",
+    "url": "https://odontovita.com.br",
+    "ogImage": "/og-image.jpg"
+  },
+  "footer": {
+    "copyright": "OdontoVita Clínica Odontológica",
+    "disclaimer": "A OdontoVita é uma clínica odontológica registrada no CRO-MG. Os valores são informativos e podem variar conforme avaliação clínica individual."
+  }
+}

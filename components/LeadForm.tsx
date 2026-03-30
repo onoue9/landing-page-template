@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import { content } from '@/lib/config';
+import { useConfig } from '@/contexts/ConfigContext';
 import { useLeadForm } from '@/hooks/useLeadForm';
 
 const LeadForm: React.FC = () => {
+  const { content } = useConfig();
   const { form } = content;
   const {
     formData,
@@ -148,9 +149,9 @@ const LeadForm: React.FC = () => {
               className="w-full px-5 py-4 rounded-xl border border-accent/10 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none bg-surface text-accent text-sm sm:text-base"
             >
               <option value="">Tipo de plano</option>
-              <option value="individual">Individual / Autônomo</option>
-              <option value="familiar">Familiar</option>
-              <option value="empresarial">Empresarial / MEI</option>
+              {form.planOptions.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
             </select>
           </div>
           <div>
