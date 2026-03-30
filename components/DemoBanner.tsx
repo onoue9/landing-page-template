@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Paintbrush } from 'lucide-react';
 
 const IS_DEMO = process.env.NEXT_PUBLIC_DEMO === 'true';
 
@@ -33,9 +33,10 @@ const DemoBanner: React.FC<DemoBannerProps> = ({ previewHref = '/preview' }) => 
       <span className="truncate mx-2">MODO DEMONSTRAÇÃO — formulários não enviam dados reais</span>
       <a
         href={previewHref}
-        className="shrink-0 bg-amber-900 text-amber-50 px-3 py-0.5 rounded-full text-xs font-bold hover:bg-amber-800 transition-colors"
+        className="shrink-0 flex items-center gap-1.5 bg-amber-900 text-amber-50 px-3 py-1 rounded-full text-xs font-bold hover:bg-amber-800 transition-colors"
       >
-        Personalizar →
+        <Paintbrush className="w-3.5 h-3.5" />
+        <span>Ver com minha identidade</span>
       </a>
     </div>
   );
